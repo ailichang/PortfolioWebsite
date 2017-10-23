@@ -7,13 +7,71 @@
 
 div{
     border: 1px solid red;
-}
-nav{
     background-color: white;
 }
-#top{
-    height:50vh;
+
+.fixed-nav-bar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 9999;
+    width: 100%;
+    background-color: white;
 }
-#about, #skills, #work, #contact{
-    height: 100vmin;
+.container{
+    max-width: 85vw;
+    padding: 0;
+}
+.row{
+    margin: 0;
+}
+
+.point-eight-height{
+    height:80vh;
+}
+.full-height{
+    height:100vmin;
+}
+
+.nav-text{
+    visibility: hidden;
+}
+
+.nav-icon{
+    visibility:visible;
+}
+
+@media (min-width: 576px) {
+    div{
+        border-color: pink;
+    }
+}
+@media (min-width: 768px) {
+    div{
+        border-color: orange;
+    }
+    .nav-text{
+        visibility: visible;
+    }
+
+    .nav-icon{
+        visibility: hidden;
+    }
+}
+@media (min-width: 992px){
+    div{
+        border-color: lightgreen;
+    }
+}
+@media (min-width:1200px) {
+    div{
+        border-color: lightblue;
+    }
+    .container{
+        max-width: 1100px;
+    }
+    nav #links{
+        //width: 1100px;
+    }
+
 }

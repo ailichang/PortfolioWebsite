@@ -3,62 +3,85 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-        <link href ="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
         <link href="css/style.css" rel="stylesheet">
+
+        <link href ="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href ="node_modules/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet">
+        <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
+        <script type="text/javascript" src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
         <title>Emily Chang's Website </title>
     </head>
     <body>
-        <nav class ="row justify-content-end fixed-top">
-            <div id ="links" class ="col-6">
-                <ul class="nav">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                         <a class="nav-link" href="#">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Work</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
-                    </li>
+        <script>
+
+         </script>
+        <nav id = "links" class = "navbar">
+
+                <ul class="nav navbar-nav fixed-nav-bar">
+                     <li class="nav-item dropdown nav-icon">
+                          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                             <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
+                          </a>
+                          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                              <li><a class="nav-link" href="#links">Home</a></li>
+                              <li role="separator" class="divider"></li>
+                              <li><a class="nav-link" href="#about">About</a></li>
+                              <li role="separator" class="divider"></li>
+                              <li> <a class="nav-link" href="#work">Work</a></li>
+                              <li role="separator" class="divider"></li>
+                              <li> <a class="nav-link" href="#contact">Contact</a></li>
+                          </ul>
+                      </li>
+                      <li class="nav-item active nav-text">
+                        <a class="nav-link" href="#links">Home</a>
+                      </li>
+                      <li class="nav-item nav-text">
+                        <a class="nav-link" href="#about">About</a>
+                      </li>
+                      <li class="nav-item nav-text">
+                        <a class="nav-link" href="#work">Work</a>
+                      </li>
+                      <li class="nav-item nav-text">
+                        <a class="nav-link" href="#contact">Contact</a>
+                      </li>
                 </ul>
-            </div>
+
         </nav>
-        <main class="row justify-content-center">
-            <div id ="top" class="col-12">
+
+        <main class="justify-content-center">
+            <div id ="top" class="col-12 point-eight-height">
                 <p class="text-center"> Emily Aili Chang</p>
                 <p class="text-center"> Game & Web Developer</p>
             </div>
-            <div id ="about" class="container">
-                <div class="row">
-                    <div id="summary" class="col-6">
+            <div id ="about" class="container full-height">
+                <div class="row col-12">
+                    <div id="summary" class="cols-12 col-lg-6">
                         <p> Summary...........</p>
                     </div>
-                    <div id="education" class="col-6">
+                    <div id="education" class="col-12 col-lg-6">
                         <p> Education...........</p>
                     </div>
                 </div>
             </div>
-            <div id ="skills" class="container">
-                <div class="row">
-                    <div id="game" class="col-3">
+            <div id ="skills" class="container full-height">
+                <div class="row col-12">
+                    <div id="game" class="col-xs-12 col-md-6 col-lg-3">
                         <p> Game...........</p>
                     </div>
-                    <div id="code" class="col-3">
+                    <div id="code" class="col-xs-12 col-md-6 col-lg-3">
                         <p> Code...........</p>
                     </div>
-                    <div id= "design" class="col-3">
+                    <div id= "design" class="col-xs-12 col-md-6 col-lg-3">
                         <p> Desgin...........</p>
                     </div>
-                    <div id="language" class="col-3">
+                    <div id="language" class="col-xs-12 col-md-6 col-lg-3">
                         <p> language...........</p>
                     </div>
                 </div>
             </div>
 
-            <div id ="work" class="container">
+            <div id ="work" class="container full-height">
                 <div class="row">
                     <div id="project" class="col-6">
                         <p> Project...........</p>
@@ -68,24 +91,8 @@
                 </div>
             </div>
 
-            <div id="contact" class= "container justify-content-center">
-                <form>
-                    <div class="form-group col-sm-10">
-                      <label for="sender-name" class="col-form-label">Name</label>
-                      <input type="text" class="form-control" placeholder="Enter name" id="sender-name">
-                    </div>
-                     <div class="form-group col-sm-10">
-                        <label for="email" class="col-form-label">E-mail</label>
-                        <input type="email" class="form-control" placeholder="Enter e-mail"id="email">
-                     </div>
-                     <div class="form-group col-sm-10">
-                        <label for="message" class="col-form-label">Message</label>
-                        <input type="text" class="form-control" placeholder="Enter Message" id="message">
-                     </div>
-                     <div class="row col-sm-10">
-                         <button type="submit" class="btn btn-default">Send</button>
-                     </div>
-                </form>
+            <div id="contact" class= "container full-height">
+
             </div>
         </main>
     </body>
