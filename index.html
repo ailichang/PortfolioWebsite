@@ -7,6 +7,8 @@
 
         <link href ="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
         <link href ="node_modules/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Lato%7CSource+Sans+Pro" rel="stylesheet">
+
         <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
         <script type="text/javascript" src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 
@@ -17,8 +19,7 @@
 
          </script>
         <nav id = "links" class = "navbar">
-
-                <ul class="nav navbar-nav fixed-nav-bar">
+                <ul class="nav navbar-nav fixed-nav-bar ">
                      <li class="nav-item dropdown nav-icon">
                           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                              <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
@@ -50,49 +51,79 @@
         </nav>
 
         <main class="justify-content-center">
-            <div id ="top" class="col-12 point-eight-height">
-                <p class="text-center"> Emily Aili Chang</p>
-                <p class="text-center"> Game & Web Developer</p>
+            <div id ="top" class="col-12 hero-screen-height vertical-center-parent">
+                <div class="container vertical-center-child horizonal-center-child">
+                    <p class="text-center"> Emily Aili Chang</p>
+                    <p class="text-center"> Game & Web Developer</p>
+               </div>
             </div>
-            <div id ="about" class="container full-height">
-                <div class="row col-12">
-                    <div id="summary" class="cols-12 col-lg-6">
-                        <p> Summary...........</p>
+            <div id ="about" class="container full-height vertical-center-parent">
+                <div id="project" class="col-6">
+                    <span class="title-text">About Me</span>
+                </div>
+                <div class="container vertical-center-child">
+                    <div id="summary" class="cols-12 col-md-6 paragraph-block">
+                        <span class="sub-title-text">Summary </span><br/><br/>
+                        <p class="text-justify"> &nbsp&nbsp&nbsp&nbspI'm an enthusiastic and dedicated developer who loves to explore various of innovative technology and create interesting interactive experience and games. Seeking opportunities in software engineer position to leverage user experience design and programming.</p>
+
+                        <button>Download Resume</button>
                     </div>
-                    <div id="education" class="col-12 col-lg-6">
-                        <p> Education...........</p>
+                    <div id="education" class="col-12 col-md-6 paragraph-block">
+                        <span class="sub-title-text">Education</span><br/><br/>
+                        <p><b>September 2017 - Current</b></p>
+                        <p>User Experience Design: 10 week certificate course<br/>General Assembly, San Francisco, CA</p><br/>
+
+                        <p><b>August 2013 - May 2015</b></p>
+                        <p> Masters of Entertainment Technology <br/>Carnegie Mellon University, Entertainment Technology Center, Pittsburgh, PA</p><br/>
+                        <p><b>September 2009 - June 2013</b></p>
+                        <p> Bachelor of Computer Science and Information Engineering <br/>National Taiwan Normal University, Taiwan</p>
                     </div>
                 </div>
             </div>
-            <div id ="skills" class="container full-height">
-                <div class="row col-12">
-                    <div id="game" class="col-xs-12 col-md-6 col-lg-3">
-                        <p> Game...........</p>
+            <div id ="skills" class="container full-height vertical-center-parent">
+                <div id="project" class="col-6">
+                    <span class="title-text">Skills</span>
+                </div>
+                <div class="container vertical-center-child">
+
+                    <div id="code" class="col-xs-12 col-md-6 paragraph-block">
+                        <span class="sub-title-text">Coding</span><br/><br/>
+                        <p><b>Programming Language</b> <br/>C#, C/C++, Java, Javascipt</p>
+                        <p><b>Version Control</b> <br/>GitHub, Perforce</p>
+                        <p><b>Game Development</b><br/> Unity3D, NGUI, Photon Unity Networking, BrainCloud BaaS, Parse BaaS</p>
+                        <p><b>Web Development</b> <br/>HTML, CSS, jQuery, JSON, MySQL, PHP, Bootstrap</p>
+                        <p><b>Platforms</b><br/>PC, iOS, Android, Oculus, HTC Vive, Kinect</p>
                     </div>
-                    <div id="code" class="col-xs-12 col-md-6 col-lg-3">
-                        <p> Code...........</p>
+                    <div id= "design" class="col-xs-12 col-md-6 paragraph-block">
+                        <span class="sub-title-text">Design</span><br/><br/>
+                        <p><b>Professional Working Practices</b><br/>Rapid Prototyping, Scrum, Game Design, UX/UI Design</p>
+                        <p><b>Design Softwares</b><br/>Sketch, InVision, Adobe Photoshop, Adobe Illustrator, Adobe After Effects</p>
                     </div>
-                    <div id= "design" class="col-xs-12 col-md-6 col-lg-3">
-                        <p> Desgin...........</p>
-                    </div>
-                    <div id="language" class="col-xs-12 col-md-6 col-lg-3">
-                        <p> language...........</p>
+                    <div id="language" class="col-xs-12 col-md-6 paragraph-block">
+                        <span class="sub-title-text">Languages</span><br/><br/>
+                        <p><b>English</b>&nbsp&nbspProfessional working fluency <br/><b>Madarin Chinese</b>&nbsp&nbspNative fluency</p>
                     </div>
                 </div>
             </div>
 
-            <div id ="work" class="container full-height">
-                <div class="row">
-                    <div id="project" class="col-6">
-                        <p> Project...........</p>
-                    </div>
-                    <div id="project-image" class="col-6">
-                    </div>
+            <div id ="work" class="container full-height vertical-center-parent">
+                <div id="project" class="col-6">
+                    <span class="title-text">Projects</span>
+                </div>
+                <div id="project" class="col-6 vertical-center-child">
+                    <p> Project...........</p>
+                </div>
+                <div id="project-image" class="col-6 vertical-center-child">
                 </div>
             </div>
 
-            <div id="contact" class= "container full-height">
-
+            <div id="contact" class= "container full-height vertical-center-parent">
+                <div id="project" class="col-6">
+                    <span class="title-text">Contact</span>
+                </div>
+                <div class="container vertical-center-child">
+                    <p class="text-center"> Contact</p>
+                </div>
             </div>
         </main>
     </body>

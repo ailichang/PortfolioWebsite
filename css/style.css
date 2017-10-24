@@ -3,13 +3,26 @@
     -moz-box-sizing: border-box;
     -ms-box-sizing: border-box;
     box-sizing: border-box;
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
 div{
     border: 1px solid red;
     background-color: white;
 }
-
+main{
+    overflow: visible;
+}
+.container{
+    padding:0 !important;
+    //overflow:visible !important;
+}
+.row{
+    margin: 0 !important;
+}
+.paragraph-block{
+    padding:10 30 10 30 !important;
+}
 .fixed-nav-bar {
     position: fixed;
     top: 0;
@@ -18,18 +31,11 @@ div{
     width: 100%;
     background-color: white;
 }
-.container{
-    max-width: 85vw;
-    padding: 0;
-}
-.row{
-    margin: 0;
-}
-
-.point-eight-height{
-    height:80vh;
+.hero-screen-height{
+    height:75vmin;
 }
 .full-height{
+    //padding-top: 10vmin;
     height:100vmin;
 }
 
@@ -40,6 +46,31 @@ div{
 .nav-icon{
     visibility:visible;
 }
+
+.vertical-center-parent{
+    position: relative;
+}
+.vertical-center-child{
+    position: absolute;
+    top:55%;
+    transform: translate(0, -50%);
+}
+.horizonal-center-child{
+    position: absolute;
+    left:50%;
+    transform: translate(-50%, 0);
+}
+.title-text{
+    font-size: 18pt;
+    font-weight: bold;
+    font-family: 'Lato', sans-serif;
+}
+.sub-title-text{
+    font-size: 12pt;
+    font-weight: bold;
+    font-family: 'Lato', sans-serif;
+}
+
 
 @media (min-width: 576px) {
     div{
