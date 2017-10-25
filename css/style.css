@@ -7,20 +7,24 @@
 }
 
 div{
-    border: 1px solid red;
+    //border: 1px solid red;
     background-color: white;
 }
 main{
     overflow: visible;
 }
-
+.container-fluid{
+    padding: 0 !important;
+}
 .row{
     margin: 0 !important;
 }
 .paragraph-block{
     padding:10 30 10 30 !important;
 }
-
+.session-block{
+    margin-bottom: 5% !important;
+}
 .fixed-nav-bar {
     position: fixed;
     top: 0;
@@ -28,6 +32,13 @@ main{
     z-index: 9999;
     width: 100%;
     background-color: white;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+.anchor{
+    display: block;
+    height:8%;
+    visibility: hidden;
 }
 .hero-screen-height{
     height:75%;
@@ -58,7 +69,7 @@ main{
     transform: translate(-50%, 0);
 }
 .title-text{
-    font-size: 18pt;
+    font-size: 24pt;
     font-weight: bold;
     font-family: 'Lato', sans-serif;
     padding:10 30 10 30;
@@ -68,16 +79,64 @@ main{
     font-weight: bold;
     font-family: 'Lato', sans-serif;
 }
+.profile-image{
+    border-radius: 50%;
+    width: 150px;
+    height:150px;
+    -webkit-box-shadow: 10px 10px 40px 10px rgba(0,0,0,0.53);
+    -moz-box-shadow: 10px 10px 40px 10px rgba(0,0,0,0.53);
+    box-shadow: 10px 10px 40px 10px rgba(0,0,0,0.53);
+}
+.hero-image{
+    background: url("../image/IMG_3446.jpg");
+    background-size: cover;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-box-shadow: 0px 5px 15px 5px rgba(0,0,0,0.31);
+    -moz-box-shadow: 0px 5px 15px 5px rgba(0,0,0,0.31);
+    box-shadow: 0px 5px 15px 5px rgba(0,0,0,0.31);
 
+}
 
+.hero-text{
+    color: #fefefe;
+    text-shadow: 1px 1px 2px #0a0a0a;
+    background-color: transparent;
+    border: none;
+}
+
+.pixel-overlay {
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAH0lEQVQYV2NkQAX/GZH4/xkYGBhhAmAOSBJEwDkgAQCCrgQEjpMcPgAAAABJRU5ErkJggg==') repeat;
+}
+
+.contact-image{
+    width: 100%;
+    height: 100%;
+    background: url('../image/IMG_3445.jpg') center center no-repeat;
+    background-size: cover;
+    -webkit-box-shadow: 0px 5px 15px 5px rgba(0,0,0,0.31);
+    -moz-box-shadow: 0px 5px 15px 5px rgba(0,0,0,0.31);
+    box-shadow: 0px 5px 15px 5px rgba(0,0,0,0.31);
+}
+
+#contact{
+    background-color: orange;
+}
 @media (min-width: 576px) {
     div{
-        border-color: pink;
+        //border-color: pink;
     }
 }
 @media (min-width: 768px) {
     div{
-        border-color: orange;
+        //border-color: orange;
     }
     .nav-text{
         display: block !important;
@@ -89,12 +148,12 @@ main{
 }
 @media (min-width: 992px){
     div{
-        border-color: lightgreen;
+        //border-color: lightgreen;
     }
 }
 @media (min-width:1200px) {
     div{
-        border-color: lightblue;
+        //border-color: lightblue;
     }
     .container{
         max-width: 1100px;

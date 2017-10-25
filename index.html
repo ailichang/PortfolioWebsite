@@ -11,6 +11,8 @@
 
         <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
         <script type="text/javascript" src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="javascript/main.js"></script>
+        <script src="https://use.fontawesome.com/c8ef676cac.js"></script>
 
         <title>Emily Chang's Website </title>
     </head>
@@ -27,53 +29,63 @@
                           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                               <li><a class="nav-link" href="#links">Home</a></li>
                               <li role="separator" class="divider"></li>
-                              <li><a class="nav-link" href="#about">About</a></li>
+                              <li><a class="nav-link" href="#about-anchor">About</a></li>
                               <li role="separator" class="divider"></li>
-                              <li> <a class="nav-link" href="#work">Work</a></li>
+                              <li> <a class="nav-link" href="#work-anchor">Work</a></li>
                               <li role="separator" class="divider"></li>
-                              <li> <a class="nav-link" href="#contact">Contact</a></li>
+                              <li> <a class="nav-link" href="#contact-anchor">Contact</a></li>
                           </ul>
                       </li>
                       <li class="nav-item active nav-text">
                         <a class="nav-link" href="#links">Home</a>
                       </li>
                       <li class="nav-item nav-text">
-                        <a class="nav-link" href="#about">About</a>
+                        <a class="nav-link" href="#about-anchor">About</a>
                       </li>
                       <li class="nav-item nav-text">
-                        <a class="nav-link" href="#work">Work</a>
+                        <a class="nav-link" href="#work-anchor">Work</a>
                       </li>
                       <li class="nav-item nav-text">
-                        <a class="nav-link" href="#contact">Contact</a>
+                        <a class="nav-link" href="#contact-anchor">Contact</a>
                       </li>
                 </ul>
 
         </nav>
 
-        <main class=" container justify-content-center">
-            <div id ="top" class = "row hero-screen-height vertical-center-parent">
-                <div class="col-12 vertical-center-child horizonal-center-child">
+        <main class=" container-fluid justify-content-center">
+            <div id="top" class = "row full-height vertical-center-parent hero-image">
+                <div class = "pixel-overlay"></div>
+                <div class="col-12 vertical-center-child horizonal-center-child hero-text">
+                    <img class="profile-image" src="image/heroimage.jpg"></img> 
                     <p class="text-center"> Emily Aili Chang</p>
                     <p class="text-center"> Game & Web Developer</p>
+                    <p class="text-justify"> &nbsp&nbsp&nbsp&nbsp&nbsp&nbspI'm an enthusiastic and dedicated developer who loves to explore various of innovative technology and create interesting interactive experience and games. Seeking opportunities in software engineer position to leverage user experience design and programming.</p>
                 </div>
             </div>
 
+            <span class="anchor" id="about-anchor"></span>
             <div class = "row">
-                <div id ="about" class="col-12">
-                    <div id="project" class="row">
+                <div id = "about" class="col-12">
+                    <div class="row">
                         <div class = "col-12">
                             <span class="title-text">About Me</span>
                         </div>
                     </div>
                     <div class="row">
-                        <div id="summary" class="col-xs-12 col-sm-6 paragraph-block">
-                            <span class="sub-title-text">Summary </span><br/><br/>
-                            <p class="text-justify"> &nbsp&nbsp&nbsp&nbspI'm an enthusiastic and dedicated developer who loves to explore various of innovative technology and create interesting interactive experience and games. Seeking opportunities in software engineer position to leverage user experience design and programming.</p>
-                            <button>Download Resume</button>
+                        <div id="professional-experience" class="col-xs-12 col-sm-6 paragraph-block">
+                            <span class="sub-title-text">Professional Experience</span><br/><br/>
+                            <p><b>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspUNITY DEVELOPER &nbsp&nbsp&nbsp&nbsp Realiteer Corp. <br/>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspDecember 2015-Present</b></p>
+                            <ul>
+                                <li>Collaborating with the team to brainstorm ideas, design game mechanics, rapid prototype and implement features for company’s core projects and client products.</li>
+                                <li>Maintaining code base for projects and making enhancements based on feedback.</li>
+                                <li>Built several VR experience according to the clients’ need, including virtual furniture showroom for CORT, meditation experience for Cognitive Leap Inc. and English/Chinese vocabulary learning game for iTutor Group.</li>
+                            </ul>
+                            <button type="button" class="btn btn-primary" id="resume-button">View Resume</button>
+                            <button type="button" class="btn btn-primary" id="work-button">See My Works</button>
                         </div>
                         <div id="education" class="col-xs-12 col-sm-6 paragraph-block">
                             <span class="sub-title-text">Education</span><br/><br/>
-                            <p><b>September 2017 - Current</b></p>
+                            <p><b>September 2017 - Present</b></p>
                             <p>User Experience Design: 10 week certificate course<br/>General Assembly, San Francisco, CA</p><br/>
 
                             <p><b>August 2013 - May 2015</b></p>
@@ -84,9 +96,9 @@
                     </div>
                 </div>
             </div>
-            <div class = "row">
+            <div class = "row session-block">
                 <div id ="skills" class="col-12">
-                    <div id="project" class="row">
+                    <div class="row">
                         <span class="title-text">Skills</span>
                     </div>
                     <div class="row">
@@ -110,27 +122,34 @@
                     </div>
                 </div>
             </div>
-            <div class="row full-height">
+            <span class="anchor" id="work-anchor"></span>
+            <div class="row session-block">
                 <div id ="work" class="col-12">
                     <div class ="row">
                         <div id="project" class="col-xs-12">
                             <span class="title-text">Projects</span>
                         </div>
-                        <div id="project" class="col-xs-12 col-sm-6">
+                        <div id="project" class="col-xs-12 col-sm-6 full-height">
                             <p> Project...........</p>
                         </div>
-                        <div id="project-image" class="col-xs-12 col-sm-6">
-                            <p> Project...........</p>
+                        <div id="project-image" class="col-xs-12 col-sm-6 full-height">
+                            <a href="#" class="thumbnail">
+                                <img src="" alt="...">
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="row hero-screen-height">
-                <div id="project" class="col-12">
-                    <span class="title-text">Contact</span>
-                </div>
-                <div class="col-12">
-                    <p class="text-center"> Contact</p>
+            <span class="anchor" id="contact-anchor"></span>
+            <div class="row hero-screen-height vertical-center-parent session-block contact-image">
+                <div class = "pixel-overlay"></div>
+                <div id="contact" class="col-12 vertical-center-child horizonal-center-child">
+                    <p class="text-center title-text">Get in Touch! <br/><span class="text-center sub-title-text"> Interested in doing a project together?</span> </p><br/>
+                    <span class = " horizonal-center-child">
+                        <a href="mailto:emilyailichang@gmail.com"><i class="fa fa-envelope fa-2x" aria-hidden="true"></i></a>
+                        <a href="http://github.com/ailichang"><i class="fa fa-github fa-2x" aria-hidden="true"></i></a>
+                        <a href="http://linkedin.com/in/ailichang"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>
+                    </span>
                 </div>
             </div>
 
