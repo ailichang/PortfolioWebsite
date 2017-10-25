@@ -13,16 +13,14 @@ div{
 main{
     overflow: visible;
 }
-.container{
-    padding:0 !important;
-    //overflow:visible !important;
-}
+
 .row{
     margin: 0 !important;
 }
 .paragraph-block{
     padding:10 30 10 30 !important;
 }
+
 .fixed-nav-bar {
     position: fixed;
     top: 0;
@@ -32,19 +30,18 @@ main{
     background-color: white;
 }
 .hero-screen-height{
-    height:75vmin;
+    height:75%;
 }
 .full-height{
-    //padding-top: 10vmin;
-    height:100vmin;
+    height:90%;
 }
 
 .nav-text{
-    visibility: hidden;
+    display: none !important;
 }
 
 .nav-icon{
-    visibility:visible;
+    display: block !important;
 }
 
 .vertical-center-parent{
@@ -52,7 +49,7 @@ main{
 }
 .vertical-center-child{
     position: absolute;
-    top:55%;
+    top:50%;
     transform: translate(0, -50%);
 }
 .horizonal-center-child{
@@ -64,6 +61,7 @@ main{
     font-size: 18pt;
     font-weight: bold;
     font-family: 'Lato', sans-serif;
+    padding:10 30 10 30;
 }
 .sub-title-text{
     font-size: 12pt;
@@ -82,11 +80,11 @@ main{
         border-color: orange;
     }
     .nav-text{
-        visibility: visible;
+        display: block !important;
     }
 
     .nav-icon{
-        visibility: hidden;
+        display: none !important;
     }
 }
 @media (min-width: 992px){
