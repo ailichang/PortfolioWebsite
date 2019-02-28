@@ -3,160 +3,171 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-        <link href="css/style.css" rel="stylesheet">
-
-        <link href ="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-        <link href ="node_modules/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet">
+        <link href ="node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Lato%7CSource+Sans+Pro" rel="stylesheet">
-
+        <link href="css/template.css" rel="stylesheet">
         <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
-        <script type="text/javascript" src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-        <script type="text/javascript" src="javascript/main.js"></script>
+        <script type="text/javascript" src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
         <script src="https://use.fontawesome.com/c8ef676cac.js"></script>
 
-        <title>Emily Chang's Website </title>
+        <title>Emily Chang</title>
     </head>
     <body>
-        <script>
+        <div class="nav-container" role="navigation">
+            <a><span id="resume-button">Resume</span> </a>
+            <a href="#contact-anchor">Contact</a>
+            <a href="#work-anchor">Work</a>
+            <a href="#about-anchor">About</a>
+            <a href="#top-anchor" class="active">Home</a>
+        </div>
 
-         </script>
-        <nav id = "links" class = "navbar">
-                <ul class="nav navbar-nav fixed-nav-bar ">
-                     <li class="nav-item dropdown nav-icon">
-                          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                             <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
-                          </a>
-                          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                              <li><a class="nav-link" href="#links">Home</a></li>
-                              <li role="separator" class="divider"></li>
-                              <li><a class="nav-link" href="#about-anchor">About</a></li>
-                              <li role="separator" class="divider"></li>
-                              <li> <a class="nav-link" href="#work-anchor">Work</a></li>
-                              <li role="separator" class="divider"></li>
-                              <li> <a class="nav-link" href="#contact-anchor">Contact</a></li>
-                          </ul>
-                      </li>
-                      <li class="nav-item active nav-text">
-                        <a class="nav-link" href="#links">Home</a>
-                      </li>
-                      <li class="nav-item nav-text">
-                        <a class="nav-link" href="#about-anchor">About</a>
-                      </li>
-                      <li class="nav-item nav-text">
-                        <a class="nav-link" href="#work-anchor">Work</a>
-                      </li>
-                      <li class="nav-item nav-text">
-                        <a class="nav-link" href="#contact-anchor">Contact</a>
-                      </li>
-                </ul>
-
-        </nav>
-
-        <main class=" container-fluid justify-content-center">
-            <div id="top" class = "row full-height vertical-center-parent hero-image">
-                <div class = "pixel-overlay"></div>
-                <div class="col-12 vertical-center-child horizonal-center-child hero-text">
-                    <img class="profile-image" src="image/heroimage.jpg"></img> 
-                    <p class="text-center"> Emily Aili Chang</p>
-                    <p class="text-center"> Game & Web Developer</p>
-                    <p class="text-justify"> &nbsp&nbsp&nbsp&nbsp&nbsp&nbspI'm an enthusiastic and dedicated developer who loves to explore various of innovative technology and create interesting interactive experience and games. Seeking opportunities in software engineer position to leverage user experience design and programming.</p>
+        <main class="container-fluid justify-content-center">
+            <!-- Hero Image/ Welcome message-->
+            <a class="anchor" id="top-anchor"></a>
+            <div id="top" class = "row eighty-height">
+                 <div id ="home-message">
+                     <p id="introduce" >Hi,<br> I'm Emily. <br></p>
                 </div>
             </div>
-
-            <span class="anchor" id="about-anchor"></span>
-            <div class = "row">
-                <div id = "about" class="col-12">
-                    <div class="row">
-                        <div class = "col-12">
-                            <span class="title-text">About Me</span>
-                        </div>
+            
+            <!-- About-->
+            <a class="anchor" id="about-anchor"></a>
+            <div id="about" class = "row">
+                <div>
+                    <span class="title-text">About Me</span>
+                </div>
+                <div id="summary">
+                </div>
+            </div>
+            <div id="skills" class="row">
+                <div>
+                    <span class="title-text">Skills</span>
+                </div>
+                <div id="skill-code" class="col-md-4">
+                    <span class="skill-title-text">&lt;Coding&gt;</span><br/><br/>
+                    <p><b>Programming Language</b> <br/>C#, C/C++, Java, Javascipt</p>
+                    <p><b>Version Control</b> <br/>GitHub, Perforce</p>
+                    <p><b>Game Development</b><br/> Unity3D, NGUI, Photon Unity Networking, BrainCloud BaaS, Parse BaaS</p>
+                    <p><b>Web Development</b> <br/>HTML, CSS, jQuery, JSON, MySQL, PHP, Bootstrap</p>
+                    <p><b>Platforms</b><br/>PC, iOS, Android, Oculus, HTC Vive, Kinect</p>
+                </div>
+                <div id= "skill-design" class="col-md-4">
+                    <span class="skill-title-text">&lt;Design&gt;</span><br/><br/>
+                    <p><b>Professional Working Practices</b><br/>Rapid Prototyping, Scrum, Game Design, UX/UI Design</p>
+                    <p><b>Design Softwares</b><br/>Sketch, InVision, Adobe Photoshop, Adobe Illustrator, Adobe After Effects</p>
+                </div>
+                <div id="skill-language" class="col-md-4">
+                    <span class="skill-title-text">&lt;Languages&gt;</span><br/><br/>
+                    <p><b>English</b><br/>Professional working fluency <br/><b>Madarin Chinese</b><br/>Native fluency</p>
+                </div>
+            </div>
+            
+            <!-- Projects-->
+            <a class="anchor" id="work-anchor"></a>
+            <div id ="work" class="row">
+                <div>
+                    <span class="title-text">Work</span>
+                </div>
+                <!--
+                <div id="vr-project" class = "col-md-12">
+                    <div>
+                        <span class="title-text">Virtual Reality</span>
                     </div>
-                    <div class="row">
-                        <div id="professional-experience" class="col-xs-12 col-sm-6 paragraph-block">
-                            <span class="sub-title-text">Professional Experience</span><br/><br/>
-                            <p><b>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspUNITY DEVELOPER &nbsp&nbsp&nbsp&nbsp Realiteer Corp. <br/>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspDecember 2015-Present</b></p>
-                            <ul>
-                                <li>Collaborating with the team to brainstorm ideas, design game mechanics, rapid prototype and implement features for company’s core projects and client products.</li>
-                                <li>Maintaining code base for projects and making enhancements based on feedback.</li>
-                                <li>Built several VR experience according to the clients’ need, including virtual furniture showroom for CORT, meditation experience for Cognitive Leap Inc. and English/Chinese vocabulary learning game for iTutor Group.</li>
-                            </ul>
-                            <button type="button" class="btn btn-primary" id="resume-button">View Resume</button>
-                            <button type="button" class="btn btn-primary" id="work-button">See My Works</button>
-                        </div>
-                        <div id="education" class="col-xs-12 col-sm-6 paragraph-block">
-                            <span class="sub-title-text">Education</span><br/><br/>
-                            <p><b>September 2017 - Present</b></p>
-                            <p>User Experience Design: 10 week certificate course<br/>General Assembly, San Francisco, CA</p><br/>
-
-                            <p><b>August 2013 - May 2015</b></p>
-                            <p> Masters of Entertainment Technology <br/>Carnegie Mellon University, Entertainment Technology Center, Pittsburgh, PA</p><br/>
-                            <p><b>September 2009 - June 2013</b></p>
-                            <p> Bachelor of Computer Science and Information Engineering <br/>National Taiwan Normal University, Taiwan</p>
-                        </div>
+                </div> -->
+                 <div id="game-project" class = "col-md-12">
+                    <div>
+                        <span class="category-title-text">Interactive Experience: Virtual Reality, Games & Others</span>
+                    </div>
+                </div>
+                 <div id="design-project" class = "col-md-12">
+                    <div>
+                        <span class="category-title-text">Design Document</span>
+                    </div>
+                </div>
+                 <div id="illustration-project" class = "col-md-12">
+                    <div>
+                        <span class="category-title-text">Illustration</span>
                     </div>
                 </div>
             </div>
-            <div class = "row session-block">
-                <div id ="skills" class="col-12">
-                    <div class="row">
-                        <span class="title-text">Skills</span>
-                    </div>
-                    <div class="row">
-                        <div id="code" class="col-xs-12 col-md-6 paragraph-block">
-                            <span class="sub-title-text">Coding</span><br/><br/>
-                            <p><b>Programming Language</b> <br/>C#, C/C++, Java, Javascipt</p>
-                            <p><b>Version Control</b> <br/>GitHub, Perforce</p>
-                            <p><b>Game Development</b><br/> Unity3D, NGUI, Photon Unity Networking, BrainCloud BaaS, Parse BaaS</p>
-                            <p><b>Web Development</b> <br/>HTML, CSS, jQuery, JSON, MySQL, PHP, Bootstrap</p>
-                            <p><b>Platforms</b><br/>PC, iOS, Android, Oculus, HTC Vive, Kinect</p>
-                        </div>
-                        <div id= "design" class="col-xs-12 col-md-6 paragraph-block">
-                            <span class="sub-title-text">Design</span><br/><br/>
-                            <p><b>Professional Working Practices</b><br/>Rapid Prototyping, Scrum, Game Design, UX/UI Design</p>
-                            <p><b>Design Softwares</b><br/>Sketch, InVision, Adobe Photoshop, Adobe Illustrator, Adobe After Effects</p>
-                        </div>
-                        <div id="language" class="col-xs-12 col-md-6 paragraph-block">
-                            <span class="sub-title-text">Languages</span><br/><br/>
-                            <p><b>English</b>&nbsp&nbspProfessional working fluency <br/><b>Madarin Chinese</b>&nbsp&nbspNative fluency</p>
-                        </div>
-                    </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+
+              <!-- Modal content-->
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
-            </div>
-            <span class="anchor" id="work-anchor"></span>
-            <div class="row session-block">
-                <div id ="work" class="col-12">
-                    <div class ="row">
-                        <div id="project" class="col-xs-12">
-                            <span class="title-text">Projects</span>
+                <div class="modal-body fit-content">
+                   <div id="myCarousel" class="carousel slide carousel-fade col-md-6" data-ride="carousel">
+                      <!-- Indicators -->
+                      <ol class="carousel-indicators" id="project-slider-indicator">
+                        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                      </ol>
+
+                      <!-- Wrapper for slides -->
+                      <div class="carousel-inner" id="project-slider">
+                        <div class="video-container item active">
+                            <div class="youtube-video" id='AO89eXKO0c4'></div>
+                            <div class="carousel-caption">Video 1</div>
+                          </div>
+                        <div class="item">
+                          <img src="image/IMG_3447.jpg" alt="second">
+                          <div class="carousel-caption">
+                             <p>caption</p>
+                          </div>
                         </div>
-                        <div id="project" class="col-xs-12 col-sm-6 full-height">
-                            <p> Project...........</p>
+                          <div class="item">
+                          <img src="image/IMG_3448.jpg" alt="third">
+                          <div class="carousel-caption">
+                                 <p>caption</p>
+                          </div>
                         </div>
-                        <div id="project-image" class="col-xs-12 col-sm-6 full-height">
-                            <a href="#" class="thumbnail">
-                                <img src="" alt="...">
-                            </a>
-                        </div>
+                      </div>
+
+                      <!-- Controls -->
+                      <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                      </a>
+                      <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                      </a>
                     </div>
+                   <div class="col-md-6" id="project-details">
+                       <table id="project-table"> </table>
+                   </div>
                 </div>
+              </div>
+
             </div>
-            <span class="anchor" id="contact-anchor"></span>
-            <div class="row hero-screen-height vertical-center-parent session-block contact-image">
-                <div class = "pixel-overlay"></div>
-                <div id="contact" class="col-12 vertical-center-child horizonal-center-child">
-                    <p class="text-center title-text">Get in Touch! <br/><span class="text-center sub-title-text"> Interested in doing a project together?</span> </p><br/>
-                    <span class = " horizonal-center-child">
-                        <a href="mailto:emilyailichang@gmail.com"><i class="fa fa-envelope fa-2x" aria-hidden="true"></i></a>
-                        <a href="http://github.com/ailichang"><i class="fa fa-github fa-2x" aria-hidden="true"></i></a>
-                        <a href="http://linkedin.com/in/ailichang"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>
-                    </span>
-                </div>
-            </div>
+            </div>  
 
         </main>
     </body>
-
     <footer>
+        <a class="anchor" id="contact-anchor"></a>
+        <div id="contact-image">
+            <div id="contact">
+                <p class="title-text">Get in Touch! <br/>Interested in doing a project together? <br/>
+                    <a href="mailto:dev.emily@gmail.com" target="_blank"><i class="fa fa-envelope fa-2x" aria-hidden="true"></i></a>
+                    <a href="http://github.com/ailichang" target="_blank"><i class="fa fa-github fa-2x" aria-hidden="true"></i></a>
+                    <a href="http://linkedin.com/in/ailichang" target="_blank"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>
+                </p>
+                <div class="tooltip">Designed by<!-- <a href="http://ailichang.wixsite.com/home">Emily Chang </a>
+                    <span class="tooltiptext">Visit Emily's Blog</span>-->
+                </div>
+            </div>
+        </div>
+        <div class="tooltip">Hover over me
+          <span class="tooltiptext">Tooltip text</span>
+        </div>
     </footer>
 
+    <script type="text/javascript" src="javascript/main.js"></script>
+    <script type="text/javascript" src="javascript/bio.js"></script>
+    <script type="text/javascript" src="javascript/projects.js"></script> 
 </html>

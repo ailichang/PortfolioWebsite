@@ -1,0 +1,24 @@
+{
+  "name": "portolio",
+  "version": "1.0.0",
+  "description": "Emily Chang's Portfolio",
+  "main": "index.js",
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.2.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ailichang/PortfolioWebsite.git"
+  },
+  "author": "Emily Chang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ailichang/PortfolioWebsite/issues"
+  },
+  "homepage": "https://github.com/ailichang/PortfolioWebsite#readme"
+}

@@ -1,0 +1,292 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+    border-width: 100em 0 100em 0;
+}
+/*
+div{
+    border: 1px solid red;
+}*/
+
+.main{
+    z-index: 0;
+}
+
+.nav-container {
+  overflow: hidden;
+  background-color: #333;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  box-shadow: 0 10px 10px -10px rgba(0,0,0,.2); /*shadow*/
+  padding-right: 10%; /*set the nav tab a bit closer to middle*/
+  z-index: 10; /* make sure this value is higher then other component to always stay above*/
+}
+
+.nav-container a {
+  float:right !important;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  font-size: 18px;
+  text-transform: uppercase;
+  text-decoration: none; /*hide underline*/    
+  font-weight: lighter;
+}
+
+.nav-container a:hover {
+  background: #c9f6ff;
+  color: black;
+  text-decoration: none; /*hide underline*/
+}
+
+.nav-container a.active {
+  background-color: #7cd1e2;
+  text-decoration: none; /*hide underline*/    
+  color: white;
+}
+
+.anchor{ /*anchor offset, prevent navbar blocking */
+    display: block;
+    position: relative;
+    top: -70px;
+    visibility: hidden;
+}
+
+.title-text{
+    font-size: 28pt;
+}
+
+.skill-title-text{
+    font-size: 18pt;
+    text-align: center;
+    font-weight: lighter;
+}
+
+.category-title-text{
+    font-size: 18pt;
+    font-weight: lighter;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.eighty-height{
+    height:80%;
+}
+.full-height{
+    height:90%;
+}
+
+.project-btn{
+    display: flex; /*height follows child's height*/
+    width: 100%; /*width follows col-md-*/
+    border: 0;   /*make sure both border and padding is set to zero to make mask as same size*/
+    padding: 0;
+    background: url('../image/IMG_3445.jpg') no-repeat; /*set image url by default*/
+    background-size:cover; /*scales image as large as possible without stretching*/
+    border-radius: 4px;
+    font-size: 14px;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.project-btn-mask{
+    display: flex; 
+    width: 100%;
+    padding-top: 75%;
+    border: 0;
+    border-radius: 4px;
+    background: rgba(0,0,0,0.6); /*mask color*/
+    /*set mask transition: opacity back to 0*/
+    opacity: 0;
+    transition: opacity 1s ease;
+    -webkit-transition: opacity 1s ease;
+    -moz-transition: opacity 1s ease;
+}
+
+.project-btn-mask:hover{
+    /*set mask transition when hover: opacity to 1*/
+    opacity: 1;
+    transition: opacity 1s ease;
+    -webkit-transition: opacity 1s ease;
+    -moz-transition: opacity 1s ease;
+}
+
+.fit-content{
+    display: block;
+    overflow: auto;
+    padding: 15px;
+}
+
+
+.youtube-carousel{
+  border: 4px solid #e25454;
+}
+
+.video-container { 
+   position: relative; /* keeps the aspect ratio */ 
+   padding-bottom: 56.25%; /* fine tunes the video positioning */ 
+   padding-top: 60px; overflow: hidden;
+   margin-bottom: -1px;
+   margin-right: -1px;   
+}
+
+.video-container iframe,
+.video-container object,
+.video-container embed {
+  position: absolute;  
+  top: 0; 
+  left: 0; 
+  width: 100%; 
+  height: 100%;
+}
+
+.table{
+    width: 100%;
+}
+
+.th, .td{
+     text-align: justify;  
+     border-bottom: 1px solid #ddd;
+}
+
+.project-cell{
+    /*reset padding instead of using default bootstrap padding*/
+    padding: 5px;
+}
+
+/* Tooltip container */
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+ 
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+
+#game-project, #design-project, #illustration-project{
+    /*reset instead of using default bootstrap padding*/
+    padding: 0;
+}
+
+#top{
+    /*hero image background*/
+    background: url("../image/apple.png");
+    background-size: 65%;
+    background-repeat: no-repeat;
+    background-position: right;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#home-message{
+    margin: 2
+        %;
+    padding-right: 45%;
+    float:left !important; 
+    text-align: left;
+    font-size: 30pt;
+    line-height: 1.1em;
+}
+
+#introduce{
+    font-size: 48pt;
+    line-height: 0.9em;
+}
+
+#summary{
+    font-size: 18pt;
+    line-height: 1.1em;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+#skill-code, #skill-design, #skill-language{
+    margin: 20px 0;
+    font-size: 14pt;
+    line-height: 1em;
+    text-align: left;
+    text-justify: inter-word;
+}
+
+#contact-image{
+    width: 100%;
+    height: 80%;
+    background: url('../image/IMG_3445.jpg') center center no-repeat;
+    background-size: cover;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#contact{
+    text-align: center;
+    color: white;
+    margin:0 auto;
+    position:relative;
+}
+
+@media (min-width: 576px) {
+    div{
+        border-color: pink;
+    }
+}
+@media (min-width: 768px) {
+    div{
+        border-color: orange;
+    }
+    .nav-text{
+        display: block !important;
+    }
+
+    .nav-icon{
+        display: none !important;
+    }
+}
+@media (min-width: 992px){
+    div{
+        border-color: lightgreen;
+    }
+    
+    #about, #skills, #work{
+        margin:0 50px;
+    }
+
+}
+@media (min-width:1200px) {
+    /*
+    div{
+        border-color: lightblue;
+    }*/
+    #about, #skills, #work, #top{
+        margin: 5% 10%;
+        position: none;
+    }
+}

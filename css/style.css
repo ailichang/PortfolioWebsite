@@ -16,58 +16,18 @@ main{
 .container-fluid{
     padding: 0 !important;
 }
-.row{
-    margin: 0 !important;
-}
-.paragraph-block{
-    padding:10 30 10 30 !important;
-}
-.session-block{
-    margin-bottom: 5% !important;
-}
-.fixed-nav-bar {
-    position: fixed;
-    top: 0;
-    right: 0;
-    z-index: 9999;
-    width: 100%;
-    background-color: white;
-    margin: 0 !important;
-    padding: 0 !important;
-}
+
+
 .anchor{
     display: block;
     height:8%;
     visibility: hidden;
 }
-.hero-screen-height{
-    height:75%;
-}
+
 .full-height{
     height:90%;
 }
 
-.nav-text{
-    display: none !important;
-}
-
-.nav-icon{
-    display: block !important;
-}
-
-.vertical-center-parent{
-    position: relative;
-}
-.vertical-center-child{
-    position: absolute;
-    top:50%;
-    transform: translate(0, -50%);
-}
-.horizonal-center-child{
-    position: absolute;
-    left:50%;
-    transform: translate(-50%, 0);
-}
 .title-text{
     font-size: 24pt;
     font-weight: bold;
@@ -79,14 +39,7 @@ main{
     font-weight: bold;
     font-family: 'Lato', sans-serif;
 }
-.profile-image{
-    border-radius: 50%;
-    width: 150px;
-    height:150px;
-    -webkit-box-shadow: 10px 10px 40px 10px rgba(0,0,0,0.53);
-    -moz-box-shadow: 10px 10px 40px 10px rgba(0,0,0,0.53);
-    box-shadow: 10px 10px 40px 10px rgba(0,0,0,0.53);
-}
+
 .hero-image{
     background: url("../image/IMG_3446.jpg");
     background-size: cover;
@@ -98,13 +51,6 @@ main{
     -moz-box-shadow: 0px 5px 15px 5px rgba(0,0,0,0.31);
     box-shadow: 0px 5px 15px 5px rgba(0,0,0,0.31);
 
-}
-
-.hero-text{
-    color: #fefefe;
-    text-shadow: 1px 1px 2px #0a0a0a;
-    background-color: transparent;
-    border: none;
 }
 
 .pixel-overlay {
