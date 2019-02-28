@@ -92,7 +92,7 @@ div{
     width: 100%; /*width follows col-md-*/
     border: 0;   /*make sure both border and padding is set to zero to make mask as same size*/
     padding: 0;
-    background: url('../image/IMG_3445.jpg') no-repeat; /*set image url by default*/
+    background: url('../image/IMG_3445.JPG') no-repeat; /*set image url by default*/
     background-size:cover; /*scales image as large as possible without stretching*/
     border-radius: 4px;
     font-size: 14px;
@@ -187,7 +187,7 @@ div{
 #contact-image{
     width: 100%;
     height: 80%;
-    background: url('../image/IMG_3445.jpg') center center no-repeat;
+    background: url('../image/IMG_3445.JPG') center center no-repeat;
     background-size: cover;
     text-align: center;
     display: flex;
