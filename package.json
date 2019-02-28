@@ -1,11 +1,10 @@
 {
-  "name": "portolio",
+  "name": "portfolio",
   "version": "1.0.0",
   "description": "Emily Chang's Portfolio",
-  "main": "index.js",
+  "main": "index.html",
   "dependencies": {
-    "bootstrap": "^3.3.7",
-    "jquery": "^3.2.1"
+    "jquery": "^3.3.1"
   },
   "devDependencies": {},
   "scripts": {
@@ -20,5 +19,5 @@
   "bugs": {
     "url": "https://github.com/ailichang/PortfolioWebsite/issues"
   },
-  "homepage": "https://github.com/ailichang/PortfolioWebsite#readme"
+  "homepage": "https://github.com/ailichang/PortfolioWebsite"
 }

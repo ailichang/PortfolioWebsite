@@ -3,11 +3,11 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-        <link href ="node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+        <link href ="node_modules/bootstrap/css/bootstrap.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Lato%7CSource+Sans+Pro" rel="stylesheet">
         <link href="css/template.css" rel="stylesheet">
         <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
-        <script type="text/javascript" src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+        <script type="text/javascript" src="node_modules/bootstrap/js/bootstrap.js"></script>
         <script src="https://use.fontawesome.com/c8ef676cac.js"></script>
 
         <title>Emily Chang</title>
@@ -21,7 +21,7 @@
             <a href="#top-anchor" class="active">Home</a>
         </div>
 
-        <main class="container-fluid justify-content-center">
+        <main class="container-fluid">
             <!-- Hero Image/ Welcome message-->
             <a class="anchor" id="top-anchor"></a>
             <div id="top" class = "row eighty-height">
@@ -39,56 +39,61 @@
                 <div id="summary">
                 </div>
             </div>
-            <div id="skills" class="row">
-                <div>
+          
+            <div id="skills">
+                <div class="row">
                     <span class="title-text">Skills</span>
                 </div>
-                <div id="skill-code" class="col-md-4">
-                    <span class="skill-title-text">&lt;Coding&gt;</span><br/><br/>
-                    <p><b>Programming Language</b> <br/>C#, C/C++, Java, Javascipt</p>
-                    <p><b>Version Control</b> <br/>GitHub, Perforce</p>
-                    <p><b>Game Development</b><br/> Unity3D, NGUI, Photon Unity Networking, BrainCloud BaaS, Parse BaaS</p>
-                    <p><b>Web Development</b> <br/>HTML, CSS, jQuery, JSON, MySQL, PHP, Bootstrap</p>
-                    <p><b>Platforms</b><br/>PC, iOS, Android, Oculus, HTC Vive, Kinect</p>
-                </div>
-                <div id= "skill-design" class="col-md-4">
-                    <span class="skill-title-text">&lt;Design&gt;</span><br/><br/>
-                    <p><b>Professional Working Practices</b><br/>Rapid Prototyping, Scrum, Game Design, UX/UI Design</p>
-                    <p><b>Design Softwares</b><br/>Sketch, InVision, Adobe Photoshop, Adobe Illustrator, Adobe After Effects</p>
-                </div>
-                <div id="skill-language" class="col-md-4">
-                    <span class="skill-title-text">&lt;Languages&gt;</span><br/><br/>
-                    <p><b>English</b><br/>Professional working fluency <br/><b>Madarin Chinese</b><br/>Native fluency</p>
+                <div class="row">
+                    <div id="skill-code" class="col-md-4">
+                        <span class="skill-title-text">&lt;Coding&gt;</span><br/><br/>
+                        <p><b>Programming Language</b> <br/>C#, C/C++, Java, Javascipt</p>
+                        <p><b>Version Control</b> <br/>GitHub, Perforce</p>
+                        <p><b>Game Development</b><br/> Unity3D, NGUI, Photon Unity Networking, BrainCloud BaaS, Parse BaaS</p>
+                        <p><b>Web Development</b> <br/>HTML, CSS, jQuery, JSON, MySQL, PHP, Bootstrap</p>
+                        <p><b>Platforms</b><br/>PC, iOS, Android, Oculus, HTC Vive, Kinect</p>
+                    </div>
+                    <div id= "skill-design" class="col-md-4">
+                        <span class="skill-title-text">&lt;Design&gt;</span><br/><br/>
+                        <p><b>Professional Working Practices</b><br/>Rapid Prototyping, Scrum, Game Design, UX/UI Design</p>
+                        <p><b>Design Softwares</b><br/>Sketch, InVision, Adobe Photoshop, Adobe Illustrator, Adobe After Effects</p>
+                    </div>
+                    <div id="skill-language" class="col-md-4">
+                        <span class="skill-title-text">&lt;Languages&gt;</span><br/><br/>
+                        <p><b>English</b><br/>Professional working fluency <br/><b>Madarin Chinese</b><br/>Native fluency</p>
+                    </div>
                 </div>
             </div>
             
             <!-- Projects-->
             <a class="anchor" id="work-anchor"></a>
-            <div id ="work" class="row">
-                <div>
+            <div id ="work">
+                <div class="row">
                     <span class="title-text">Work</span>
                 </div>
-                <!--
-                <div id="vr-project" class = "col-md-12">
-                    <div>
-                        <span class="title-text">Virtual Reality</span>
+                <div class ="row">
+                    <!--
+                    <div id="vr-project" class = "col-md-12">
+                        <div>
+                            <span class="title-text">Virtual Reality</span>
+                        </div>
+                    </div> -->
+                     <div id="game-project" class = "col-md-12">
+                        <div>
+                            <span class="category-title-text">Interactive Experience: Virtual Reality, Games & Others</span>
+                        </div>
                     </div>
-                </div> -->
-                 <div id="game-project" class = "col-md-12">
-                    <div>
-                        <span class="category-title-text">Interactive Experience: Virtual Reality, Games & Others</span>
+                     <div id="design-project" class = "col-md-12">
+                        <div>
+                            <span class="category-title-text">Design Document</span>
+                        </div>
                     </div>
-                </div>
-                 <div id="design-project" class = "col-md-12">
-                    <div>
-                        <span class="category-title-text">Design Document</span>
+                     <div id="illustration-project" class = "col-md-12">
+                        <div>
+                            <span class="category-title-text">Illustration</span>
+                        </div>
                     </div>
-                </div>
-                 <div id="illustration-project" class = "col-md-12">
-                    <div>
-                        <span class="category-title-text">Illustration</span>
-                    </div>
-                </div>
+                </div>    
             </div>
 
             <!-- Modal -->
@@ -111,22 +116,11 @@
 
                       <!-- Wrapper for slides -->
                       <div class="carousel-inner" id="project-slider">
+                          <!--
                         <div class="video-container item active">
                             <div class="youtube-video" id='AO89eXKO0c4'></div>
                             <div class="carousel-caption">Video 1</div>
-                          </div>
-                        <div class="item">
-                          <img src="image/IMG_3447.jpg" alt="second">
-                          <div class="carousel-caption">
-                             <p>caption</p>
-                          </div>
-                        </div>
-                          <div class="item">
-                          <img src="image/IMG_3448.jpg" alt="third">
-                          <div class="carousel-caption">
-                                 <p>caption</p>
-                          </div>
-                        </div>
+                          </div> -->
                       </div>
 
                       <!-- Controls -->

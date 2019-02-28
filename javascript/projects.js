@@ -306,14 +306,23 @@ var projects = {
            for(var category in projects){
                if(category == "display" || category == "displayDetail" ) continue; // skip functions
                for (var i = 0; i < projects[category].length; i++) {
+   
                   var index = category + "-project-"+i;
-                  var msg = HTMLProjectPreview.replace("%data%", index);
                   var targetTagId = "#"+category+"-project";
-                  $(msg).appendTo(targetTagId);
-                  var url = "url('"+projects[category][i].images[0].url+"')";
+                  //console.log("index:" + index + "tagTd:" + targetTagId);   
+                   
+                  if( i % 3 == 0){ //create row
+                      var row = "<div class='row'></div>";
+                      $(row).appendTo(targetTagId);
+                  }    
+                  //add cell(project buttons)      
+                  var msg = HTMLProjectPreview.replace("%data%", index);
+                  $(msg).appendTo($(targetTagId+" .row:last-child"));  
 
+                  //set button  
+                  var url = "url('"+projects[category][i].images[0].url+"')";
                   var button = $("#"+index)[0]; // get the project button
-                  //console.log(button);
+                  console.log(button);
                   button.style.backgroundImage = url;               
                   //add onlick event
                   button.onclick = function(){projects.displayDetail(this.id)};

@@ -289,4 +289,7 @@ div{
         margin: 5% 10%;
         position: none;
     }
+    #skills .row, #work .row{
+        margin-left: 0;
+    }
 }
