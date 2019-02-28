@@ -81,6 +81,12 @@ div{
     height:90%;
 }
 
+.project-cell{
+    display: flex; /*height follows child's height*/
+    /*reset padding instead of using default bootstrap padding*/
+    padding: 5px;
+    width: 100%;
+}
 .project-btn{
     display: flex; /*height follows child's height*/
     width: 100%; /*width follows col-md-*/
@@ -123,29 +129,6 @@ div{
     padding: 15px;
 }
 
-
-.youtube-carousel{
-  border: 4px solid #e25454;
-}
-
-.video-container { 
-   position: relative; /* keeps the aspect ratio */ 
-   padding-bottom: 56.25%; /* fine tunes the video positioning */ 
-   padding-top: 60px; overflow: hidden;
-   margin-bottom: -1px;
-   margin-right: -1px;   
-}
-
-.video-container iframe,
-.video-container object,
-.video-container embed {
-  position: absolute;  
-  top: 0; 
-  left: 0; 
-  width: 100%; 
-  height: 100%;
-}
-
 .table{
     width: 100%;
 }
@@ -154,39 +137,6 @@ div{
      text-align: justify;  
      border-bottom: 1px solid #ddd;
 }
-
-.project-cell{
-    /*reset padding instead of using default bootstrap padding*/
-    padding: 5px;
-}
-
-/* Tooltip container */
-.tooltip {
-  position: relative;
-  display: inline-block;
-  border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
-}
-
-/* Tooltip text */
-.tooltip .tooltiptext {
-  visibility: hidden;
-  width: 120px;
-  background-color: black;
-  color: #fff;
-  text-align: center;
-  padding: 5px 0;
-  border-radius: 6px;
- 
-  /* Position the tooltip text - see examples below! */
-  position: absolute;
-  z-index: 1;
-}
-
-/* Show the tooltip text when you mouse over the tooltip container */
-.tooltip:hover .tooltiptext {
-  visibility: visible;
-}
-
 
 #game-project, #design-project, #illustration-project{
     /*reset instead of using default bootstrap padding*/
@@ -206,8 +156,7 @@ div{
 }
 
 #home-message{
-    margin: 2
-        %;
+    margin: 2%;
     padding-right: 45%;
     float:left !important; 
     text-align: left;
