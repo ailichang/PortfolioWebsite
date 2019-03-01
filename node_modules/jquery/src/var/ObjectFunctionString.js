@@ -4,4 +4,4 @@ define( [
 	"use strict";
 
 	return fnToString.call( Object );
-} );
+});

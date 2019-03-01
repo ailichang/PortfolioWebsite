@@ -92,7 +92,7 @@ main{
         display: none !important;
     }
 }
-@media (min-width: 992px){
+@media (min-width: 992px) {
     div{
         //border-color: lightgreen;
     }
