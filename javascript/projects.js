@@ -1,12 +1,21 @@
 /*jslint plusplus: true */
 /*jslint browser: true*/
 /*global $, jQuery, alert, console*/
-/*global HTMLProjectPreview, HTMLProjectHeadline, HTMLProjectTitle, HTMLSliderIndicator, HTMLSliderImageItem*/
+
+var HTMLProjectPreview = '<div class="col-md-4 project-cell"><button type="button" class="project-btn" id ="%data%" data-toggle="modal" data-target="#projectModal"><div class="project-btn-mask"><p>%headline%</p></div></button></div>';
+var HTMLProjectTitle = '<span id="project-title"><h4><b>%title%</b> %time%</h4></span>';
+var HTMLProjectHeadline = '<div id="project-headline"><p><b>%data%</b></p></div>';
+var HTMLSliderIndicator = '<li data-target="#myCarousel" data-slide-to="%id%"></li>';
+var HTMLSliderImageItem = '<div class="carousel-item"><img src="%image%" alt="%alt%"><div class="carousel-caption"><span>%data%</span></div></div>';
+var HTMLProjectImage = '<img scr="%data%" class="project-image"/>';
+var HTMLProjectYoutubeVideo = '<iframe width="560" height="315" src="%data%" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+
+
 var projects = {
     game: [
         {
             title: "WiseMind",
-            time: "September 2016 - Present",
+            time: "September 2016 - August 2017",
             headline: " VR Experience That Improves Psychotherapy",
             role: "Unity Developer",
             company: "Realiteer Corp",
@@ -16,7 +25,7 @@ var projects = {
             icon: "image/work/WiseMind.png",
             images: [
                 {
-                    caption: "Tai-chi",
+                    caption: "Tai-chi Game",
                     url: "image/work/wisemind-taichi.jpg"
                 },
                 {
@@ -24,7 +33,7 @@ var projects = {
                     url: "image/work/wisemind-stackingstone.jpg"
                 },
                 {
-                    caption: "Breathing",
+                    caption: "Breathing Exercise",
                     url: "image/work/wisemind-breathing.jpg"
                 }
             ],
@@ -52,7 +61,7 @@ var projects = {
                     url: "image/work/battleZ-1.jpg"
                 },
                 {
-                    caption: "Giant Zombie",
+                    caption: "Giant Zombie Appeared",
                     url: "image/work/battleZ-2.png"
                 }
             ],
@@ -80,7 +89,7 @@ var projects = {
                     url: "image/work/h2hSnow-1.jpg"
                 },
                 {
-                    caption: "Learned Vocabulary",
+                    caption: "Summary of End Game: Vocabulary Learned",
                     url: "image/work/h2hSnow-2.jpg"
                 }
             ]
@@ -102,7 +111,7 @@ var projects = {
                     url: "image/work/cort-1.png"
                 },
                 {
-                    caption: "",
+                    caption: "Surprise Effect When Approach Interactive Objects",
                     url: "image/work/cort-2.png"
                 }
             ],
@@ -134,7 +143,7 @@ var projects = {
                     url: "image/etc/hungrysquid-playmode-2.png"
                 },
                 {
-                    caption: "Create Map",
+                    caption: "Create Map Interface",
                     url: "image/etc/hungrysquid-createmode.png"
                 },
                 {
@@ -168,7 +177,7 @@ var projects = {
             icon: "image/etc/marioneta-icon.png",
             images: [
                 {
-                    caption: "Spring",
+                    caption: "Spring Stage",
                     url: "image/etc/marioneta-main.png"
                 },
                 {
@@ -205,7 +214,7 @@ var projects = {
     design: [
         {
             title: "Food Invite",
-            headline: "",
+            headline: "App Design: Dinnning Decision Maker for Group",
             time: "Fall 2017",
             role: "UX Designer",
             advisor: "General Assembly, San Francisco",
@@ -214,31 +223,31 @@ var projects = {
             slides: "https://docs.google.com/presentation/d/1oMES-BubSEm0BhLYsqIAz245ZqdBHumG_PUKG-_GOpM/edit?usp=sharing",
             images: [
                 {
-                    caption: "wireframe",
+                    caption: "Wireframe",
                     url: "image/foodinvite/wireframe2.png"
                 },
                 {
-                    caption: "problem statement",
+                    caption: "Problem Statement",
                     url: "image/foodinvite/problem.png"
                 },
                 {
-                    caption: "persona",
+                    caption: "Persona",
                     url: "image/foodinvite/persona1.png"
                 },
                 {
-                    caption: "sketch",
+                    caption: "Sketch",
                     url: "image/foodinvite/sketch.png"
                 },
                 {
-                    caption: "sketch",
+                    caption: "Sketch",
                     url: "image/foodinvite/sketch2.png"
                 },
                 {
-                    caption: "user flow",
+                    caption: "User Flow",
                     url: "image/foodinvite/userflow.png"
                 },
                 {
-                    caption: "wireframe",
+                    caption: "Wireframe Version 1",
                     url: "image/foodinvite/wireframe.png"
                 }
             ]
@@ -263,8 +272,9 @@ var projects = {
     ],
     illustration: [
         {
-            title: "Some Water Color Illustration",
-            headline: "",
+            title: "Doodling!",
+            headline: "Watercolor Illustrations",
+            time: "2016 - Present",
             description: "Having fun with water color! :) ",
             images: [
                 {
@@ -273,7 +283,7 @@ var projects = {
                 },
                 {
                     caption: "Cupcakes",
-                    url: "image/watercolor/cupcakes.jpg"
+                    url: "image/watercolor/cupcake.jpg"
                 },
                 {
                     caption: "Immitate Jessie Willcox Smith's Painting with watercolor",
@@ -283,13 +293,13 @@ var projects = {
         },
         {
             title: "Giant",
-            headline: "The idea is you as a giant uses the spoon to help goblins to fight against evil humans.",
+            headline: "VR + PS Move Game",
             time: "Fall 2013",
-            role: "2D Artist",
+            role: "2D Artist / UI Designer",
             advisor: "Entertainment Technology Center, CMU",
             designTools: ["Photoshop"],
             platform: ["Oculus", "PSMove"],
-            description: "Here is what giant can do with the spoon, hit the human with the spoon, scoop the humans and eat them, smash the obstacles, use the spoon as a bridge to cross gaps or use the spoon as a shield to protect goblins from falling rocks and arrows.",
+            description: "The idea is you as a giant uses the spoon to help goblins to fight against evil humans. Here is what giant can do with the spoon, hit the human with the spoon, scoop the humans and eat them, smash the obstacles, use the spoon as a bridge to cross gaps or use the spoon as a shield to protect goblins from falling rocks and arrows.",
             images: [
                 {
                     caption: "Spri",
@@ -326,12 +336,13 @@ var projects = {
                         }
                         //add cell(project buttons)      
                         msg = HTMLProjectPreview.replace("%data%", index);
+                        msg = msg.replace("%headline%", projects[category][i].headline);
                         $(msg).appendTo($(targetTagId + " .row:last-child"));
 
                         //set button  
                         url = "url('" + projects[category][i].images[0].url + "')";
                         button = $("#" + index)[0]; // get the project button
-                        console.log(button);
+                        //console.log(button);
                         button.style.backgroundImage = url;
                         //add onlick event
                         button.onclick = displayDetailOnClick;
@@ -369,7 +380,7 @@ var projects = {
         }
         //set header
         $('#project-title').remove();
-        console.log(index);
+        //console.log(index);
         msg = HTMLProjectTitle.replace("%time%", projectCategory[index].time);
         msg = msg.replace("%title%", projectCategory[index].title);
         $('.modal-header').prepend(msg);
@@ -408,7 +419,7 @@ var projects = {
             $("#project-slider-indicator").append(indicator);
         }
         //add active to show first slide
-        $("#project-slider .item").first().addClass("active");
+        $("#project-slider .carousel-item").first().addClass("active");
         $("#project-slider-indicator li").first().addClass("active");
         $('#myCarousel').carousel(0);
     }
