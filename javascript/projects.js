@@ -3,13 +3,13 @@
 /*global $, jQuery, alert, console*/
 
 var HTMLProjectPreview = '<div class="col-md-4 project-cell"><button type="button" class="project-btn" id ="%data%" data-toggle="modal" data-target="#projectModal"><div class="project-btn-mask"><p>%headline%</p></div></button></div>';
-var HTMLProjectTitle = '<span id="project-title"><h4><b>%title%</b> %time%</h4></span>';
+var HTMLProjectTitle = '<span id="project-title"><b>%title%</b>&nbsp&nbsp&nbsp%time%</span>';
 var HTMLProjectHeadline = '<div id="project-headline"><p><b>%data%</b></p></div>';
 var HTMLSliderIndicator = '<li data-target="#myCarousel" data-slide-to="%id%"></li>';
 var HTMLSliderImageItem = '<div class="carousel-item"><img src="%image%" alt="%alt%"><div class="carousel-caption"><span>%data%</span></div></div>';
 var HTMLProjectImage = '<img scr="%data%" class="project-image"/>';
 var HTMLProjectYoutubeVideo = '<iframe width="560" height="315" src="%data%" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
-
+var HTMLButtonLink =  '<a href="%url%" class="btn" role="button" target="_blank"> <button type="button" class="btn btn-info">%text%</button></a>';
 
 var projects = {
     game: [
@@ -256,10 +256,9 @@ var projects = {
             title: "Magic Portion Rule Book",
             headline: "2 Player Dice Game",
             time: "Fall 2017",
-            role: "UX Designer",
-            advisor: "General Assembly, San Francisco",
-            designTools: ["Sketch", "InVision"],
-            description: "Two kings, who wanted to live forever, send their men to find the entire magic potion of elixir of life. They know that recipe has separated into 3 pieces. Bothof the kings doubt each other having one of pieces and request their men to take it from the other king's men. ",
+            role: "Game Designer",
+            advisor: "Entertainment Technology Center, CMU",
+            description: "Here's the story of the game: Two kings, who wanted to live forever, send their men to find the entire magic potion of elixir of life. They know that recipe has separated into 3 pieces. Bothof the kings doubt each other having one of pieces and request their men to take it from the other king's men. ",
             pdf: "http://docs.wixstatic.com/ugd/9f5b2e_0f11624c1b454966af8b6df9b63c7327.pdf",
             images: [
                 {
@@ -362,6 +361,8 @@ var projects = {
             image,
             indicator,
             property,
+            propertyEntry,
+            propertyValue,
             i;
         
         switch (category) {
@@ -392,12 +393,26 @@ var projects = {
 
         $('#project-table').empty(); //refresh, delete previous result     
         //fill project detail table
-        row = "<tr id='%id%'><td>%entry%</td><td>%value%</td></tr>";
+        row = "<tr id='%id%'><td class='table-entry''>%entry%</td><td>%value%</td></tr>";
         for (property in projectCategory[index]) {
             if (projectCategory[index].hasOwnProperty(property)) {
                 if (property !== "images" && property !== "videos" && property !== "icon" && property !== "title" && property !== "time" && property !== "headline") {
-                    msg = row.replace("%entry%", property);
-                    msg = msg.replace("%value%", projectCategory[index][property]);
+                    propertyEntry = property;
+                    if (property === "developmentTools") {
+                        propertyEntry = "dev tools";
+                    } else if (property === "designTools") {
+                        propertyEntry = "design tools";
+                    }
+                    msg = row.replace("%entry%", propertyEntry.toUpperCase());
+                    propertyValue = projectCategory[index][property];
+                    if (propertyValue instanceof Array) {
+                        propertyValue = propertyValue.join(', ');
+                    }
+                    if (property === "pdf" || property === "slides") {
+                        propertyValue = HTMLButtonLink.replace('%url%', propertyValue);
+                        propertyValue = propertyValue.replace('%text%', "Open in New Tab");
+                    }
+                    msg = msg.replace("%value%", propertyValue);
                     msg = msg.replace("%id%", "project-" + property);
                     $("#project-table").append(msg);
                 }
