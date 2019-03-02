@@ -420,7 +420,7 @@ var projects = {
         }
 
         //set carousel
-        $('#myCarousel').carousel("pause").removeData();
+        //$('#myCarousel').carousel("pause").removeData(); //somehow triggers animation
         $('#project-slider').empty();
         $('#project-slider-indicator').empty();
         for (i = 0; i < projectCategory[index].images.length; i++) {
