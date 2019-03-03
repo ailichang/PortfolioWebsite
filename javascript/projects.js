@@ -6,10 +6,18 @@ var HTMLProjectPreview = '<div class="col-md-4 project-cell"><button type="butto
 var HTMLProjectTitle = '<span id="project-title"><b>%title%</b>&nbsp&nbsp&nbsp%time%</span>';
 var HTMLProjectHeadline = '<div id="project-headline"><p><b>%data%</b></p></div>';
 var HTMLSliderIndicator = '<li data-target="#myCarousel" data-slide-to="%id%"></li>';
-var HTMLSliderImageItem = '<div class="carousel-item"><img src="%image%" alt="%alt%"><div class="carousel-caption"><span>%data%</span></div></div>';
+var HTMLSliderImageItem = '<div class="carousel-item"><img src="%image%" alt="%alt%"><div class="carousel-caption"><span>%data%</span></div></img></div>';
 var HTMLProjectImage = '<img scr="%data%" class="project-image"/>';
-var HTMLProjectYoutubeVideo = '<iframe width="560" height="315" src="%data%" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+var HTMLSliderYoutubeVideoItem = '<div class="carousel-item"><iframe id="%id%" width="%width%" height="%height%" src="https://www.youtube.com/embed/%videoID%?enablejsapi=1&version=3&playerapiid=ytplayer" frameborder="0" allowfullscreen="true" allowscriptaccess="always"><div class="carousel-caption"><span>%data%</span></div></iframe></div>';
 var HTMLButtonLink =  '<a href="%url%" class="btn" role="button" target="_blank"> <button type="button" class="btn btn-info">%text%</button></a>';
+
+var pauseYoutubeVideo = function () {
+    "use strict";
+    var id = $(".carousel-item.active:has(iframe)").find("iframe").attr('id');
+    if (id !== null && typeof (id) !== "undefined") {
+        window.frames[id].contentWindow.postMessage('{"event":"command","func":"' + 'pauseVideo' + '","args":""}', '*');
+    }
+};
 
 var projects = {
     game: [
@@ -39,8 +47,8 @@ var projects = {
             ],
             videos: [
                 {
-                    caption: "Promo Video",
-                    url: "https://youtu.be/W1WT4dM_ZtY"
+                    caption: "WiseMind Promo Video",
+                    youtubeId: "W1WT4dM_ZtY"
                 }
             ]
 
@@ -67,8 +75,8 @@ var projects = {
             ],
             videos: [
                 {
-                    caption: "Promo Video",
-                    url: "https://youtu.be/aSED7MUTTds"
+                    caption: "BattleZ Promo Video",
+                    youtubeId: "aSED7MUTTds"
                 }
             ]
         },
@@ -117,8 +125,8 @@ var projects = {
             ],
             videos: [
                 {
-                    caption: "Promo Video",
-                    url: "https://youtu.be/DJBOhu9PvhM"
+                    caption: "CORT Video",
+                    youtubeId: "DJBOhu9PvhM"
                 }
             ]
         },
@@ -157,8 +165,8 @@ var projects = {
             ],
             videos: [
                 {
-                    caption: "Promo Video",
-                    url: "https://youtu.be/DJBOhu9PvhM"
+                    caption: "Hungry Squid Promo Video",
+                    youtubeId: "DJBOhu9PvhM"
                 }
             ]
         },
@@ -195,16 +203,16 @@ var projects = {
             ],
             videos: [
                 {
-                    caption: "Promo Video",
-                    url: "https://youtu.be/DKYC4Ey70Rk"
+                    caption: "Marioneta Promo Video",
+                    youtubeId: "DKYC4Ey70Rk"
                 },
                 {
                     caption: "Basic movements, Jump and Draw Particles by Waving Hands",
-                    url: "https://youtu.be/wve7FqOeICI"
+                    youtubeId: "wve7FqOeICI"
                 },
                 {
                     caption: "Hit, Kick, Pickup, Throwing, Droping, Passing Objects to Other Player and Play intruments",
-                    url: "https://youtu.be/iizWjLs3zD8"
+                    youtubeId: "iizWjLs3zD8"
                 }
 
             ]
@@ -312,6 +320,12 @@ var projects = {
                     caption: "Puppet Selection Interface",
                     url: "image/etc/marioneta-ui.jpg"
                 }
+            ],
+            videos: [
+                {
+                    caption: "Giant Promo Video",
+                    youtubeId: "OAO5e56SFOs"
+                }
             ]
         }
     ],
@@ -359,6 +373,7 @@ var projects = {
             row,
             msg,
             image,
+            video,
             indicator,
             property,
             propertyEntry,
@@ -423,6 +438,28 @@ var projects = {
         //$('#myCarousel').carousel("pause").removeData(); //somehow triggers animation
         $('#project-slider').empty();
         $('#project-slider-indicator').empty();
+        //add video to carousel
+        if (projectCategory[index].hasOwnProperty("videos")) {
+            for (i = 0; i < projectCategory[index].videos.length; i++) {
+                video = projectCategory[index].videos[i];
+                //msg = HTMLSliderYoutubeVideoItem.replace("%url%", video.url);
+                msg = HTMLSliderYoutubeVideoItem.replace("%videoID%", video.youtubeId);
+                msg = msg.replace("%id%", video.youtubeId);
+                msg = msg.replace("%data%", video.caption);
+                msg = msg.replace("%width%", 966);
+                msg = msg.replace("%height%", 562);
+                $("#project-slider").append(msg);
+
+                indicator = HTMLSliderIndicator.replace("%id%", i);
+                $("#project-slider-indicator").append(indicator);
+                
+                //set video pause when next or prev button is clicked
+                $('a.carousel-control-prev').click(pauseYoutubeVideo);
+                $('a.carousel-control-next').click(pauseYoutubeVideo);
+            }
+        }
+                
+        //add image to carousel
         for (i = 0; i < projectCategory[index].images.length; i++) {
             image = projectCategory[index].images[i];
             msg = HTMLSliderImageItem.replace("%image%", image.url);
