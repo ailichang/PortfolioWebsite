@@ -323,9 +323,10 @@ th, td{
 }
 
 @media (min-width: 576px) {
+    /*
     div{
         border-color: pink;
-    }
+    }*/
     
     .project-modal{
         margin: 5% auto;
@@ -338,9 +339,10 @@ th, td{
     }
 }
 @media (min-width: 768px) {
+    /*
     div{
         border-color: orange;
-    }
+    }*/
     .project-modal{
         margin: 5% auto;
         width: 500px;
@@ -352,9 +354,10 @@ th, td{
     }
 }
 @media (min-width: 992px) {
+    /*
     div{
         border-color: lightgreen;
-    }
+    }*/
     
     #about, #skills, #work{
         margin:0 50px;
