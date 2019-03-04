@@ -12,7 +12,7 @@ var bio = {
         github: "ailichang",
         location: "San Francisco Bay Area, CA"
     },
-    welcomeMessage: "A professional VR & game software engineer/ front-end developer/ illustration hobbyist.",
+    welcomeMessage: "A professional VR & game software engineer/ UX engineer/ illustration hobbyist.",
     summary: "I'm an enthusiastic and dedicated developer who loves to explore various innovative technology and create interesting games and impactful interactive experience. Seeking opportunities in software engineer position to leverage user experience design and programming.",
     skills: {
         language: ["English( professional working proficiency)", "Mandarin Chinese( Native fluency)"]
