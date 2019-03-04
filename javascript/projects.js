@@ -19,6 +19,14 @@ var pauseYoutubeVideo = function () {
     }
 };
 
+var stopYoutubeVideo = function () {
+    "use strict";
+    var id = $(".carousel-item.active:has(iframe)").find("iframe").attr('id');
+    if (id !== null && typeof (id) !== "undefined") {
+        window.frames[id].contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
+    }
+};
+
 var projects = {
     game: [
         {
@@ -261,7 +269,7 @@ var projects = {
             ]
         },
         {
-            title: "Magic Portion Rule Book",
+            title: "Magic Potion Rule Book",
             headline: "2 Player Dice Game",
             time: "Fall 2017",
             role: "Game Designer",
@@ -270,8 +278,52 @@ var projects = {
             pdf: "http://docs.wixstatic.com/ugd/9f5b2e_0f11624c1b454966af8b6df9b63c7327.pdf",
             images: [
                 {
-                    caption: "Spri",
-                    url: "image/etc/marioneta-main.png"
+                    caption: "Main Deck",
+                    url: "image/etc/magic-potion/main-deck.jpg"
+                },
+                {
+                    caption: "Info Deck",
+                    url: "image/etc/magic-potion/info-deck.jpg"
+                },
+                {
+                    caption: "Icons",
+                    url: "image/etc/magic-potion/icons.jpg"
+                },
+                {
+                    caption: "Character Card: Assassin",
+                    url: "image/etc/magic-potion/assassin-card.png"
+                },
+                {
+                    caption: "Character Card: Hunter",
+                    url: "image/etc/magic-potion/hunter-card.png"
+                },
+                {
+                    caption: "Character Card: Merchant",
+                    url: "image/etc/magic-potion/merchant-card.png"
+                },
+                {
+                    caption: "Character Card: Magician",
+                    url: "image/etc/magic-potion/magician-card.png"
+                },
+                {
+                    caption: "Character Card: necromancer",
+                    url: "image/etc/magic-potion/necromancer-card.png"
+                },
+                {
+                    caption: "Character Card: Priest",
+                    url: "image/etc/magic-potion/priest-card.png"
+                },
+                {
+                    caption: "Character Card: Swordsman",
+                    url: "image/etc/magic-potion/swordsmen-card.png"
+                },
+                {
+                    caption: "Character Card: thief",
+                    url: "image/etc/magic-potion/thief-card.png"
+                },
+                {
+                    caption: "Prototype",
+                    url: "image/etc/magic-potion/prototype.jpg"
                 }
             ]
         }
@@ -282,7 +334,7 @@ var projects = {
             title: "Doodling!",
             headline: "Watercolor Illustrations",
             time: "2016 - Present",
-            description: "Having fun with water color! :) ",
+            description: "I took a watercolor course in Palo Alto Art Center in 2016 and since then I got interested in watercolor illustrations. Here are some of my recent watercolor illustrations!",
             images: [
                 {
                     caption: "Apples",
@@ -309,22 +361,38 @@ var projects = {
             description: "The idea is you as a giant uses the spoon to help goblins to fight against evil humans. Here is what giant can do with the spoon, hit the human with the spoon, scoop the humans and eat them, smash the obstacles, use the spoon as a bridge to cross gaps or use the spoon as a shield to protect goblins from falling rocks and arrows.",
             images: [
                 {
-                    caption: "Spri",
-                    url: "image/etc/marioneta-main.png"
+                    caption: "Goblins Asking for Help",
+                    url: "image/etc/giant-ask.png"
                 },
                 {
-                    caption: "Players Need to Step into Change Puppet Area to Change Puppet",
-                    url: "image/etc/marioneta-floor.png"
+                    caption: "Goblins Observing",
+                    url: "image/etc/giant-observing.png"
                 },
                 {
-                    caption: "Puppet Selection Interface",
-                    url: "image/etc/marioneta-ui.jpg"
+                    caption: "User Instruction: Bridge",
+                    url: "image/etc/giant-instruction-bridge.png"
+                },
+                {
+                    caption: "User Instruction: Eat Evil Human",
+                    url: "image/etc/giant-instruction-eat.png"
+                },
+                {
+                    caption: "User Instruction: Scoop Evil Human",
+                    url: "image/etc/giant-instruction-scoop.png"
+                },
+                {
+                    caption: "User Instruction: Shield",
+                    url: "image/etc/giant-instruction-shield.png"
                 }
             ],
             videos: [
                 {
-                    caption: "Giant Promo Video",
+                    caption: "Opening Animatic",
                     youtubeId: "OAO5e56SFOs"
+                },
+                {
+                    caption: "Gameplay Video",
+                    youtubeId: "kjNk0E0ZlIE"
                 }
             ]
         }
@@ -456,6 +524,12 @@ var projects = {
                 //set video pause when next or prev button is clicked
                 $('a.carousel-control-prev').click(pauseYoutubeVideo);
                 $('a.carousel-control-next').click(pauseYoutubeVideo);
+                
+                //pause button when modal closes
+                $('#projectModal').off('hide.bs.modal').on('hide.bs.modal', function (e) { //hide modal event was fired multiple times, this is a hack solution
+                   // e.stopImmediatePropagation();
+                    stopYoutubeVideo();
+                })
             }
         }
                 
@@ -478,5 +552,4 @@ var projects = {
     
        
 };
-
 projects.display();
