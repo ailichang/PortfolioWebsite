@@ -11,7 +11,7 @@ var HTMLSkillCategoryTitle = '<div class="skill-cat-title">%data%</div>';
 var HTMLSkillEntry = '<div class="skill-entry">%data%</div>';
 var HTMLSkillContent = '<div class="skill-content">%data%</div>';
 
-var resumeUrl = 'EmilyChangResume.pdf';
+var resumeUrl = 'doc/EmilyChangResume.pdf';
 
 var navs = ["a[href='#top-anchor']", "a[href='#about-anchor']", "a[href='#work-anchor']", "a[href='#contact-anchor']"];
 
