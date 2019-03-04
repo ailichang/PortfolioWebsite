@@ -130,12 +130,6 @@ var projects = {
                     caption: "Surprise Effect When Approach Interactive Objects",
                     url: "image/work/cort-2.png"
                 }
-            ],
-            videos: [
-                {
-                    caption: "CORT Video",
-                    youtubeId: "DJBOhu9PvhM"
-                }
             ]
         },
         {
@@ -274,7 +268,7 @@ var projects = {
             time: "Fall 2017",
             role: "Game Designer",
             advisor: "Entertainment Technology Center, CMU",
-            description: "Here's the story of the game: Two kings, who wanted to live forever, send their men to find the entire magic potion of elixir of life. They know that recipe has separated into 3 pieces. Bothof the kings doubt each other having one of pieces and request their men to take it from the other king's men. ",
+            description: "Here's the story of the game: Two kings, who wanted to live forever, send their men to find the entire magic potion of elixir of life. They know that recipe has separated into 3 pieces. Both of the kings doubt each other having one of pieces and request their men to take it from the other king's men. ",
             pdf: "doc/MagicPotion_RuleBook.pdf",
             images: [
                 {

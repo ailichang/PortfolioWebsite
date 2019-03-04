@@ -17,7 +17,7 @@ var navs = ["a[href='#top-anchor']", "a[href='#about-anchor']", "a[href='#work-a
 
 var resetNavBar = function (select) {
     "use strict";
-    //console.log(select);
+    console.log(select);
     var i;
     for (i = 0; i < navs.length; i++) {
         if (select === navs[i]) {
@@ -35,7 +35,7 @@ var resetNavBar = function (select) {
 var selectNav = function () {
     "use strict";
     var select = "a[href='" + $(this).attr('href') + "']";
-    //console.log(select);
+    console.log(select);
     resetNavBar(select);
 };
 
@@ -47,15 +47,14 @@ $(document).ready(function () {
         win.focus();
     });
     
+    //add selectNav function to nav 
     var i;
     for (i = 0; i < navs.length; i++) {
-        $(navs[i]).click(selectNav());
+        $(navs[i]).click(selectNav);
     }
-});
-
-$(document).ready(function () {
-    "use strict";
-    $('[data-toggle="tooltip"]').tooltip();
+    
+    //toggle tooltip
+     $('[data-toggle="tooltip"]').tooltip();
 });
 
 var mq = window.matchMedia("(min-width: 576px)");
