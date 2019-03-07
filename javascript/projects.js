@@ -10,6 +10,42 @@ var HTMLSliderImageItem = '<div class="carousel-item"><img src="%image%" alt="%a
 var HTMLProjectImage = '<img scr="%data%" class="project-image"/>';
 var HTMLSliderYoutubeVideoItem = '<div class="carousel-item"><iframe id="%id%" width="%width%" height="%height%" src="https://www.youtube.com/embed/%videoID%?enablejsapi=1&version=3&playerapiid=ytplayer" frameborder="0" allowfullscreen="true" allowscriptaccess="always"><div class="carousel-caption"><span>%data%</span></div></iframe></div>';
 var HTMLButtonLink =  '<a href="%url%" class="btn" role="button" target="_blank"> <button type="button" class="btn btn-info">%text%</button></a>';
+var videoWidth = 418,
+    videoHeight = 235;
+
+function ResizeVideo() {
+    var previousWidth = videoWidth; 
+    if(innerWidth < 576){
+        videoWidth = 418;
+        videoHeight = 235;
+    }
+    else if(innerWidth < 768){ // min width 576
+        videoWidth = 418;
+        videoHeight = 235;            
+    }
+    else if(innerWidth < 992){ //min width 768
+        videoWidth = 468;
+        videoHeight = 263;
+    }
+    else if(innerWidth < 1200){ //min width 992
+        videoWidth = 718;
+        videoHeight = 404
+    }
+    else{ // min width 1200px
+        videoWidth = 966;
+        videoHeight = 544;
+    }
+    if(previousWidth !== videoWidth){
+         console.log("current window size: w:"+ window.innerWidth + "h:" +window.innerHeight);
+         $("iframe").each( function (){
+            console.log($(this)[0]);
+            $(this)[0].setAttribute("width", videoWidth);
+            $(this)[0].setAttribute("height", videoHeight);
+        });   
+    }
+}
+window.addEventListener("resize", ResizeVideo);
+ResizeVideo();
 
 var pauseYoutubeVideo = function () {
     "use strict";
@@ -500,6 +536,7 @@ var projects = {
         //$('#myCarousel').carousel("pause").removeData(); //somehow triggers animation
         $('#project-slider').empty();
         $('#project-slider-indicator').empty();
+        
         //add video to carousel
         if (projectCategory[index].hasOwnProperty("videos")) {
             for (i = 0; i < projectCategory[index].videos.length; i++) {
@@ -508,8 +545,8 @@ var projects = {
                 msg = HTMLSliderYoutubeVideoItem.replace("%videoID%", video.youtubeId);
                 msg = msg.replace("%id%", video.youtubeId);
                 msg = msg.replace("%data%", video.caption);
-                msg = msg.replace("%width%", 966);
-                msg = msg.replace("%height%", 562);
+                msg = msg.replace("%width%", videoWidth);
+                msg = msg.replace("%height%", videoHeight);
                 $("#project-slider").append(msg);
 
                 indicator = HTMLSliderIndicator.replace("%id%", i);

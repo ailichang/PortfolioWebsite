@@ -56,10 +56,3 @@ $(document).ready(function () {
     //toggle tooltip
      $('[data-toggle="tooltip"]').tooltip();
 });
-
-var mq = window.matchMedia("(min-width: 576px)");
-if (mq.matches) {
-    // window width is at less than 570px
-} else {
-    // window width is greater than 570px
-}
