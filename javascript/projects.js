@@ -64,14 +64,53 @@ var stopYoutubeVideo = function () {
 };
 
 var projects = {
-    game: [
+    app: [
+        {
+            title: "Live Planet VR",
+            time: "May 2019 - October 2019",
+            headline: " VR App for Displaying 360 Videos and Live Streams",
+            role: "Unity Developer",
+            company: "Live Planet Inc.",
+            developmentTools: ["Unity3D", "Android Studio","Rider","Git","CircleCI"],
+            platform: ["Oculus Go", "GearVR"],
+            description: "Live Planet is a VR app for displaying 360 videos and livestreams captured by Live Planet 360 Camera and other supported cameras. The app allows user to view videos and livestreams uploaded from PC platform and browse other public videos, playlists and live streams. Users are also find specific video, playlist and live streams with a live planet (gear icon) code.",
+            images: [
+                {
+                    caption: "Home",
+                    url: "image/work/liveplanet/home.png"
+                },
+                {
+                    caption: "Featured Channel",
+                    url: "image/work/liveplanet/channel.png"
+                },
+                {
+                    caption: "Pausing Video From a Playlist",
+                    url: "image/work/liveplanet/playlist_pause.png"
+                },
+                {
+                    caption: "Vdeo Detail Page",
+                    url: "image/work/liveplanet/video_detail.jpg"
+                },
+                {
+                    caption: "Live Planet 360 Camera",
+                    url: "image/work/liveplanet/camera.png"
+                },
+                {
+                    caption: "Live Planet Control Apps (PC & Android)",
+                    url: "image/work/liveplanet/control_app.jpg"
+                }
+            ],
+            videos: [
+            ]
+
+        },
         {
             title: "WiseMind",
             time: "September 2016 - August 2017",
             headline: " VR Experience That Improves Psychotherapy",
             role: "Unity Developer",
             company: "Realiteer Corp",
-            developmentTools: ["Unity3D", "BrainCloud"],
+            developmentTools: ["Unity3D", "BrainCloud","GitHub"],
             platform: ["Oculus Rift", "HTC Vive"],
             description: "WiseMind is a VR platform that improves psychotherapy treatment. The users use Oculus or HTC Vive to do different exercise such as breathing, stone stacking and Tai-chi. The platform is now available on Steam. <br/> I implemented several immersive experience based on psychotherapy treatment. And I researched and integrated various social media APIs and plugins into our experience so that users can easily access to those media. ",
             icon: "image/work/WiseMind.png",
@@ -103,7 +142,7 @@ var projects = {
             headline: "VR Multiplayer Zombie Shooting Game",
             role: "Unity Developer",
             company: "Realiteer Corp",
-            developmentTools: ["Unity3D", "BrainCloud"],
+            developmentTools: ["Unity3D", "BrainCloud","GitHub"],
             platform: ["Google Cardboard (Android, iOS)", "GearVR", "RealControl"],
             description: "BattleZ is a multiplayer zombie shooting game. The players use Google VR (Cardboard) to view and RealControl to aim at zombies. The game is now available on Google Play and App Store.<br/> I designed and implemented the structure of storing and retrieving user data using a BaaS, BrainCloud. I also built user authentication and user profile customization functionalities.",
             icon: "image/work/battleZ-poster.png",
@@ -131,7 +170,7 @@ var projects = {
             role: "Unity Developer",
             company: "Realiteer Corp",
             client: "iTutorGroup",
-            developmentTools: ["Unity3D", "Photon Unity Networking"],
+            developmentTools: ["Unity3D", "Photon Unity Networking","GitHub"],
             platform: ["Google Daydream (Android, iOS)"],
             description: "H2H Snow is a VR multiplayer vocabulary learning game made for iTutorGroup. Players learn vocabulary by throwing snowballs at targets with antonyms tags and feeding food to targets with synonym tags. <br/> I worked on the importing vocabulary file and setting name tags using Photon Network.",
             icon: "image/work/h2hSnow-icon.png",
@@ -153,7 +192,7 @@ var projects = {
             role: "Unity Developer",
             company: "Realiteer Corp",
             client: "CORT",
-            developmentTools: ["Unity3D", "BrainCloud"],
+            developmentTools: ["Unity3D", "BrainCloud","GitHub"],
             platform: ["Google Cardboard (Android, iOS)"],
             description: "CORT VR is a virtual reality furniture showroom made for CORT. The viewer uses Google Cardboard to view furniture and walk through the CORT''s Beverly Hills, California showroom.<br/>I worked on the interface and navigation of experience.",
             icon: "image/work/cort-icon.png",
@@ -479,11 +518,11 @@ var projects = {
             i;
         
         switch (category) {
-        case "vr-project":
+       /* case "vr-project":
             projectCategory = projects.vr;
-            break;
-        case "game-project":
-            projectCategory = projects.game;
+            break;*/
+        case "app-project":
+            projectCategory = projects.app;
             break;
         case "design-project":
             projectCategory = projects.design;
