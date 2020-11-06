@@ -7,7 +7,7 @@ var HTMLProjectTitle = '<span id="project-title"><b>%title%</b>&nbsp&nbsp&nbsp%t
 var HTMLProjectHeadline = '<div id="project-headline"><p><b>%data%</b></p></div>';
 var HTMLSliderIndicator = '<li data-target="#myCarousel" data-slide-to="%id%"></li>';
 var HTMLSliderImageItem = '<div class="carousel-item"><img src="%image%" alt="%alt%"><div class="carousel-caption"><span>%data%</span></div></img></div>';
-var HTMLProjectImage = '<img scr="%data%" class="project-image"/>';
+var HTMLProjectImage = '<img src="%data%" class="project-image"/>';
 var HTMLSliderYoutubeVideoItem = '<div class="carousel-item"><iframe id="%id%" width="%width%" height="%height%" src="https://www.youtube.com/embed/%videoID%?enablejsapi=1&version=3&playerapiid=ytplayer" frameborder="0" allowfullscreen="true" allowscriptaccess="always"><div class="carousel-caption"><span>%data%</span></div></iframe></div>';
 var HTMLButtonLink =  '<a href="%url%" class="btn" role="button" target="_blank"> <button type="button" class="btn btn-info">%text%</button></a>';
 var videoWidth = 418,
@@ -113,19 +113,19 @@ var projects = {
             developmentTools: ["Unity3D", "BrainCloud","GitHub"],
             platform: ["Oculus Rift", "HTC Vive"],
             description: "WiseMind is a VR platform that improves psychotherapy treatment. The users use Oculus or HTC Vive to do different exercise such as breathing, stone stacking and Tai-chi. The platform is now available on Steam. <br/> I implemented several immersive experience based on psychotherapy treatment. And I researched and integrated various social media APIs and plugins into our experience so that users can easily access to those media. ",
-            icon: "image/work/WiseMind.png",
+            icon: "image/work/realiteer/WiseMind.png",
             images: [
                 {
                     caption: "Tai-chi Game",
-                    url: "image/work/wisemind-taichi.jpg"
+                    url: "image/work/realiteer/wisemind-taichi.jpg"
                 },
                 {
                     caption: "Stone Stacking",
-                    url: "image/work/wisemind-stackingstone.jpg"
+                    url: "image/work/realiteer/wisemind-stackingstone.jpg"
                 },
                 {
                     caption: "Breathing Exercise",
-                    url: "image/work/wisemind-breathing.jpg"
+                    url: "image/work/realiteer/wisemind-breathing.jpg"
                 }
             ],
             videos: [
@@ -145,15 +145,15 @@ var projects = {
             developmentTools: ["Unity3D", "BrainCloud","GitHub"],
             platform: ["Google Cardboard (Android, iOS)", "GearVR", "RealControl"],
             description: "BattleZ is a multiplayer zombie shooting game. The players use Google VR (Cardboard) to view and RealControl to aim at zombies. The game is now available on Google Play and App Store.<br/> I designed and implemented the structure of storing and retrieving user data using a BaaS, BrainCloud. I also built user authentication and user profile customization functionalities.",
-            icon: "image/work/battleZ-poster.png",
+            icon: "image/work/realiteer/battleZ-poster.png",
             images: [
                 {
                     caption: "Battle Field",
-                    url: "image/work/battleZ-1.jpg"
+                    url: "image/work/realiteer/battleZ-1.jpg"
                 },
                 {
                     caption: "Giant Zombie Appeared",
-                    url: "image/work/battleZ-2.png"
+                    url: "image/work/realiteer/battleZ-2.png"
                 }
             ],
             videos: [
@@ -173,15 +173,15 @@ var projects = {
             developmentTools: ["Unity3D", "Photon Unity Networking","GitHub"],
             platform: ["Google Daydream (Android, iOS)"],
             description: "H2H Snow is a VR multiplayer vocabulary learning game made for iTutorGroup. Players learn vocabulary by throwing snowballs at targets with antonyms tags and feeding food to targets with synonym tags. <br/> I worked on the importing vocabulary file and setting name tags using Photon Network.",
-            icon: "image/work/h2hSnow-icon.png",
+            icon: "image/work/realiteer/h2hSnow-icon.png",
             images: [
                 {
                     caption: "Snow Ball Fight",
-                    url: "image/work/h2hSnow-1.jpg"
+                    url: "image/work/realiteer/h2hSnow-1.jpg"
                 },
                 {
                     caption: "Summary of End Game: Vocabulary Learned",
-                    url: "image/work/h2hSnow-2.jpg"
+                    url: "image/work/realiteer/h2hSnow-2.jpg"
                 }
             ]
         },
@@ -195,15 +195,15 @@ var projects = {
             developmentTools: ["Unity3D", "BrainCloud","GitHub"],
             platform: ["Google Cardboard (Android, iOS)"],
             description: "CORT VR is a virtual reality furniture showroom made for CORT. The viewer uses Google Cardboard to view furniture and walk through the CORT''s Beverly Hills, California showroom.<br/>I worked on the interface and navigation of experience.",
-            icon: "image/work/cort-icon.png",
+            icon: "image/work/realiteer/cort-icon.png",
             images: [
                 {
                     caption: "Furniture Showroom",
-                    url: "image/work/cort-1.png"
+                    url: "image/work/realiteer/cort-1.png"
                 },
                 {
                     caption: "Surprise Effect When Approach Interactive Objects",
-                    url: "image/work/cort-2.png"
+                    url: "image/work/realiteer/cort-2.png"
                 }
             ]
         },
@@ -466,6 +466,70 @@ var projects = {
             ]
         }
     ],
+    side: [
+        {
+            title: "Habit Builder",
+            time: "June 2020 - Current",
+            headline: " Android mobile app for building good habits",
+            role: "Android Developer",
+            company: "None",
+            developmentTools: ["Android Studio (Java)"],
+            platform: ["Android Mobile"],
+            description: "Habit Builder is an android mobile app for helping users to build and track habits. The users can create missions based on their forming habits, schedule the missions weekly and track how their habits is executed. Tools like counters and timers are also privided so that the users can easily check if they reaches their mission goals. For example, take a walk in the neighborhood for 30 minutes every weekend or drink a cup of water for 5 times everyday. In addtion, the application includes a reward system. The users who completed the missions can received reward points and earn reward items. ",
+            images: [
+                
+                {
+                    caption: "Habits",
+                    url: "image/work/habitbuilder/habit.png"
+                },
+                {
+                    caption: "Missions",
+                    url: "image/work/habitbuilder/missions.png"
+                },
+                {
+                    caption: "Mission's Counter",
+                    url: "image/work/habitbuilder/counter.png"
+                },
+                {
+                    caption: "Mission's Timer",
+                    url: "image/work/habitbuilder/timer.png"
+                },
+                {
+                    caption: "Create Habit",
+                    url: "image/work/habitbuilder/create_habit.png"
+                },
+                {
+                    caption: "Reward (with mock data)",
+                    url: "image/work/habitbuilder/reward.png"
+                },
+                {
+                    caption: "Inventory (with mock data)",
+                    url: "image/work/habitbuilder/inventory.png"
+                },
+                {
+                    caption: "Monthly Tracker",
+                    url: "image/work/habitbuilder/tracker.png"
+                }
+            ]
+        }
+        /*,
+         {
+            title: "SangJar Android App",
+            time: "October 2020 - Current",
+            headline: "Android mobile shopping app for SangJar",
+            role: "Android Developer (Client Side)",
+            company: "SangJar",
+            developmentTools: ["Android Studio (Java)"],
+            platform: ["Android Mobile"],
+            description: "SangJar is an online shop for selling Korean beauty kit products. SangJar also teaches the users how to use the k-beauty products.",
+            images: [
+                {
+                    caption: "Website",
+                    url: "image/work/sangjar/sangjar-placeholder.png"
+                }
+            ]
+        }*/
+    ],
     display: function () {
         "use strict";
         var category, i, index, targetTagId, row, msg, url, button,
@@ -494,6 +558,8 @@ var projects = {
                         button = $("#" + index)[0]; // get the project button
                         //console.log(button);
                         button.style.backgroundImage = url;
+                        button.style.backgroundPosition = "center";
+                       // button.style.backgroundSize="contain";
                         //add onlick event
                         button.onclick = displayDetailOnClick;
                     }
@@ -518,9 +584,9 @@ var projects = {
             i;
         
         switch (category) {
-       /* case "vr-project":
-            projectCategory = projects.vr;
-            break;*/
+        case "side-project":
+            projectCategory = projects.side;
+            break;
         case "app-project":
             projectCategory = projects.app;
             break;

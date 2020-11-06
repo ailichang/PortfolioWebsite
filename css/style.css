@@ -223,7 +223,7 @@ th, td{
     font-size: 1.8em;
 }
 
-#app-project, #design-project, #illustration-project{
+#app-project, #design-project, #illustration-project, #side-project{
     /*reset instead of using default bootstrap padding*/
     padding: 0px 0px 10px 0px ;
 }

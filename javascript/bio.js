@@ -6,13 +6,13 @@
 var bio = {
     name: "Emily",
     fullName: "Emily Chang",
-    role: "Professional Unity VR Developer/ Android Software Engineer/ Illustration Hobbyist",
+    role: "Professional Software Developer/ Illustration Hobbyist",
     contacts: {
         email: "dev.emilychang@gmail.com",
         github: "ailichang",
         location: "San Francisco Bay Area, CA"
     },
-    welcomeMessage: "A professional VR & Android app developer/ UX engineer/ illustration hobbyist.",
+    welcomeMessage: "A professional Unity & Android application software developer / illustration hobbyist.",
     summary: "I'm an enthusiastic and dedicated developer who loves to explore various innovative technology and create interesting and user friendly interactive experience. Seeking opportunities in software engineer position to leverage user experience design and programming.",
     skills: {
         language: ["English( professional working proficiency)", "Mandarin Chinese( Native fluency)"]
