@@ -410,12 +410,20 @@ var projects = {
                     url: "image/watercolor/apple.jpg"
                 },
                 {
-                    caption: "Cupcakes",
-                    url: "image/watercolor/cupcake.jpg"
+                    caption: "Tiger",
+                    url: "image/watercolor/tiger.jpg"
                 },
                 {
-                    caption: "Immitate Jessie Willcox Smith's Painting with watercolor",
-                    url: "image/watercolor/umbrella.jpg"
+                    caption: "Deer",
+                    url: "image/watercolor/deer.jpg"
+                },
+                {
+                    caption: "Afghan Girl",
+                    url: "image/watercolor/afghan_girl.jpg"
+                },
+                {
+                    caption: "Flower",
+                    url: "image/watercolor/flower_girl.jpg"
                 }
             ]
         },
@@ -512,10 +520,10 @@ var projects = {
                 }
             ]
         }
-        /*,
+        ,
          {
             title: "SangJar Android App",
-            time: "October 2020 - Current",
+            time: "August 2020 - Current",
             headline: "Android mobile shopping app for SangJar",
             role: "Android Developer (Client Side)",
             company: "SangJar",
@@ -524,11 +532,27 @@ var projects = {
             description: "SangJar is an online shop for selling Korean beauty kit products. SangJar also teaches the users how to use the k-beauty products.",
             images: [
                 {
-                    caption: "Website",
-                    url: "image/work/sangjar/sangjar-placeholder.png"
+                    caption: "Main",
+                    url: "image/work/sangjar/home.png",
+                },
+                {
+                    caption: "Product Detail",
+                    url: "image/work/sangjar/product_detail.png",
+                },
+                {
+                    caption: "Product Detail",
+                    url: "image/work/sangjar/product_detail_2.png",
+                },
+                {
+                    caption: "Shopping Cart",
+                    url: "image/work/sangjar/cart.png",
+                },
+                {
+                    caption: "Customer Review",
+                    url: "image/work/sangjar/customer_review.png",
                 }
             ]
-        }*/
+        }
     ],
     display: function () {
         "use strict";
