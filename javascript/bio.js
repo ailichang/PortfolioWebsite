@@ -10,10 +10,10 @@ var bio = {
     contacts: {
         email: "dev.emilychang@gmail.com",
         github: "ailichang",
-        location: "San Francisco Bay Area, CA"
+        location: "Taiwan"
     },
-    welcomeMessage: "A professional Unity & Android application software developer / illustration hobbyist.",
-    summary: "I'm an enthusiastic and dedicated developer who loves to explore various innovative technology and create interesting and user friendly interactive experience. Seeking opportunities in software engineer position to leverage user experience design and programming.",
+    welcomeMessage: "Professional Software Developer/ Illustration Hobbyist",
+    summary: "I'm an enthusiastic and dedicated software developer who loves to explore various innovative technology and create interesting and user friendly interactive experience. Open to both onsite and remote work.",
     skills: {
         language: ["English( professional working proficiency)", "Mandarin Chinese( Native fluency)"]
     },

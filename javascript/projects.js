@@ -64,7 +64,7 @@ var stopYoutubeVideo = function () {
 };
 
 var projects = {
-    app: [
+    game: [
         {
             title: "Live Planet VR",
             time: "May 2019 - October 2019",
@@ -474,18 +474,17 @@ var projects = {
             ]
         }
     ],
-    side: [
+    mobile: [
         {
             title: "Habit Builder",
-            time: "June 2020 - Current",
+            time: "Current",
             headline: " Android mobile app for building good habits",
             role: "Android Developer",
             company: "None",
-            developmentTools: ["Android Studio (Java)"],
+            developmentTools: ["Android Studio (Java/ Kotlin)"],
             platform: ["Android Mobile"],
-            description: "Habit Builder is an android mobile app for helping users to build and track habits. The users can create missions based on their forming habits, schedule the missions weekly and track how their habits is executed. Tools like counters and timers are also privided so that the users can easily check if they reaches their mission goals. For example, take a walk in the neighborhood for 30 minutes every weekend or drink a cup of water for 5 times everyday. In addtion, the application includes a reward system. The users who completed the missions can received reward points and earn reward items. ",
+            description: "Habit Builder is an android mobile app for helping users to build habits and track behaviours. The users can create habits and the missions will be scheduled. Tools like counters and timers are also privided so that the users can easily check if they reaches their mission goals. For example, take a walk in the neighborhood for 30 minutes every weekend or drink a cup of water for 5 times everyday. Furthermore, the users who completed the missions can received experience points and achievements. ",
             images: [
-                
                 {
                     caption: "Habits",
                     url: "image/work/habitbuilder/habit.png"
@@ -523,11 +522,11 @@ var projects = {
         ,
          {
             title: "SangJar Android App",
-            time: "August 2020 - Current",
+            time: "August 2020 - March 2021",
             headline: "Android mobile shopping app for SangJar",
             role: "Android Developer (Client Side)",
             company: "SangJar",
-            developmentTools: ["Android Studio (Java)"],
+            developmentTools: ["Android Studio (Java), Shopify API"],
             platform: ["Android Mobile"],
             description: "SangJar is an online shop for selling Korean beauty kit products. SangJar also teaches the users how to use the k-beauty products.",
             images: [
@@ -608,11 +607,11 @@ var projects = {
             i;
         
         switch (category) {
-        case "side-project":
-            projectCategory = projects.side;
+        case "mobile-project":
+            projectCategory = projects.mobile;
             break;
-        case "app-project":
-            projectCategory = projects.app;
+        case "game-project":
+            projectCategory = projects.game;
             break;
         case "design-project":
             projectCategory = projects.design;
